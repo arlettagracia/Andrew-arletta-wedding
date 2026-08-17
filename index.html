@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andrew & Arletta | Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         BACKGROUND MUSIC
+    ================================================== -->
+<audio
+    id="backgroundMusic"
+    loop
+    preload="auto"
+>
+    <source
+        src="assets/music/Christina Perri - A Thousand Years (PianoCello Cover).mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+<button
+    id="musicButton"
+    class="music-button"
+    type="button"
+    onclick="toggleMusic()"
+>
+
+    🎵
+</button>
+
+
+    <!-- ==================================================
+         COVER / OPENING
+    ================================================== -->
+
+    <section
+        class="cover"
+        id="cover"
+    >
+
+        <!-- Dekorasi bunga -->
+        <div class="flower flower-top-left">✿</div>
+        <div class="flower flower-top-right">✿</div>
+        <div class="flower flower-bottom-left">✿</div>
+        <div class="flower flower-bottom-right">✿</div>
+
+
+        <div class="cover-content">
+
+            <p class="small-title">
+                THE WEDDING OF
+            </p>
+
+
+            <h1>
+                Andrew
+                <span>&</span>
+                Arletta
+            </h1>
+
+
+            <div class="gold-line"></div>
+
+
+            <p class="date">
+                07 NOVEMBER 2026
+            </p>
+
+
+            <!-- NAMA TAMU -->
+
+            <div class="guest-box">
+
+                <p class="guest-label">
+                    Kepada Yth.
+                </p>
+
+                <p
+                    class="guest-name"
+                    id="guestName"
+                >
+                    Tamu Undangan
+                </p>
+
+            </div>
+
+
+            <!-- OPEN BUTTON -->
+
+            <button
+                class="open-button"
+                type="button"
+                onclick="openInvitation()"
+            >
+                BUKA UNDANGAN
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         BRIDE & GROOM
+    ================================================== -->
+
+    <section
+        class="couple-section"
+        id="couple"
+    >
+
+        <div class="couple-container">
+
+            <p class="section-label">
+                THE WEDDING
+            </p>
+
+
+            <h2 class="section-title">
+                Andrew <span>&</span> Arletta
+            </h2>
+
+
+            <p class="section-description">
+                Dengan penuh sukacita dan kasih,
+                kami mengundang Anda untuk menjadi
+                bagian dari hari bahagia kami.
+            </p>
+
+
+            <!-- GROOM -->
+
+            <div class="couple-card">
+
+                <div class="photo-frame">
+    <img
+        src="assets/images/foto6.jpeg"
+        alt="Andrew"
+    >
+</div>
+
+
+                <p class="couple-role">
+                    THE GROOM
+                </p>
+
+
+                <h3>
+                    Andrew
+                </h3>
+
+
+                <p class="parents">
+                    Putra dari<br>
+                    Bapak [Nama Ayah] &<br>
+                    Ibu [Nama Ibu]
+                </p>
+
+
+                <a
+                    href="#"
+                    class="instagram"
+                >
+                    @instagram
+                </a>
+
+            </div>
+
+
+            <!-- DIVIDER -->
+
+            <div class="couple-divider">
+                <span>♡</span>
+            </div>
+
+
+            <!-- BRIDE -->
+
+            <div class="couple-card">
+
+                <div class="photo-frame">
+    <img
+        src="assets/images/foto2.jpeg"
+        alt="Arletta"
+    >
+</div>
+
+
+                <p class="couple-role">
+                    THE BRIDE
+                </p>
+
+
+                <h3>
+                    Arletta
+                </h3>
+
+
+                <p class="parents">
+                    Putri dari<br>
+                    Bapak [Nama Ayah] &<br>
+                    Ibu [Nama Ibu]
+                </p>
+
+
+                <a
+                    href="#"
+                    class="instagram"
+                >
+                    @instagram
+                </a>
+
+            </div>
+
+
+            <div class="love-quote">
+
+                <p>
+                    "Two hearts, one journey,
+                    one beautiful forever."
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SAVE THE DATE
+    ================================================== -->
+
+    <section
+        class="save-date"
+        id="save-date"
+    >
+
+        <div class="save-date-container">
+
+            <p class="section-label">
+                SAVE THE DATE
+            </p>
+
+
+            <h2>
+                Our Special Day
+            </h2>
+
+
+            <p class="save-date-text">
+                We invite you to celebrate
+                our love and happiness with us.
+            </p>
+
+
+            <div class="wedding-date">
+
+                <span class="date-day">
+                    07
+                </span>
+
+                <span class="date-month">
+                    NOVEMBER
+                </span>
+
+                <span class="date-year">
+                    2026
+                </span>
+
+            </div>
+
+
+            <!-- COUNTDOWN -->
+
+            <div class="countdown">
+
+                <div class="countdown-box">
+
+                    <span id="days">
+                        00
+                    </span>
+
+                    <small>
+                        DAYS
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <span id="hours">
+                        00
+                    </span>
+
+                    <small>
+                        HOURS
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <span id="minutes">
+                        00
+                    </span>
+
+                    <small>
+                        MINUTES
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <span id="seconds">
+                        00
+                    </span>
+
+                    <small>
+                        SECONDS
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="save-date-decoration">
+                ✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         WEDDING EVENT
+    ================================================== -->
+
+    <section
+        class="event-section"
+        id="event"
+    >
+
+        <div class="event-container">
+
+            <p class="section-label">
+                WEDDING EVENT
+            </p>
+
+
+            <h2 class="section-title">
+                Join Us
+            </h2>
+
+
+            <p class="event-description">
+                Dengan penuh sukacita, kami mengundang
+                Anda untuk hadir dan merayakan
+                hari bahagia kami.
+            </p>
+
+
+            <!-- PEMBERKATAN -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+
+                <p class="event-type">
+                    HOLY MATRIMONY
+                </p>
+
+
+                <h3>
+                    Pemberkatan
+                </h3>
+
+
+                <div class="event-line"></div>
+
+
+                <p class="event-date">
+                    Sabtu, 07 November 2026
+                </p>
+
+
+                <p class="event-time">
+                    15.00 WIB
+                </p>
+
+
+                <p class="event-place">
+                    <strong>
+                        [Nama Gereja / Venue]
+                    </strong>
+                    <br>
+                    [Alamat Lengkap]
+                    <br>
+                    [Kota]
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/Jn93t9CjWUQgMUGN8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="maps-button"
+                >
+                    📍 LIHAT LOKASI
+                </a>
+
+            </div>
+
+
+            <!-- DIVIDER -->
+
+            <div class="event-divider">
+                <span>✦</span>
+            </div>
+
+
+            <!-- RESEPSI -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+
+                <p class="event-type">
+                    WEDDING RECEPTION
+                </p>
+
+
+                <h3>
+                    Resepsi
+                </h3>
+
+
+                <div class="event-line"></div>
+
+
+                <p class="event-date">
+                    Sabtu, 07 November 2026
+                </p>
+
+
+                <p class="event-time">
+                    19.00 WIB
+                </p>
+
+
+                <p class="event-place">
+                    <strong>
+                        [Nama Gedung / Venue]
+                    </strong>
+                    <br>
+                    [Alamat Lengkap]
+                    <br>
+                    [Kota]
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/Jn93t9CjWUQgMUGN8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="maps-button"
+                >
+                    📍 LIHAT LOKASI
+                </a>
+
+            </div>
+
+
+            <div class="event-note">
+
+                <p>
+                    Mohon hadir tepat waktu
+                    dan menjadi bagian dari
+                    sukacita kami.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         GALLERY
+    ================================================== -->
+
+    <section
+        class="gallery-section"
+        id="gallery"
+    >
+
+        <div class="gallery-container">
+
+            <p class="section-label">
+                OUR GALLERY
+            </p>
+
+
+            <h2 class="section-title">
+                Our Moments
+            </h2>
+
+
+            <p class="gallery-description">
+                A collection of moments and memories
+                that we will cherish forever.
+            </p>
+
+
+            <div class="gallery-grid">
+
+                <!-- FOTO 1 -->
+
+                <div class="gallery-item gallery-large">
+
+                    <img
+                        src="assets/images/foto1.jpeg"
+                        alt="Foto Andrew dan Arletta 1"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 2 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/images/foto2.jpeg"
+                        alt="Foto Andrew dan Arletta 2"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 3 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/images/foto3.jpeg"
+                        alt="Foto Andrew dan Arletta 3"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 4 -->
+
+                <div class="gallery-item gallery-large">
+
+                    <img
+                        src="assets/images/foto4.jpeg"
+                        alt="Foto Andrew dan Arletta 4"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 5 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/images/foto5.jpeg"
+                        alt="Foto Andrew dan Arletta 5"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 6 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/images/foto6.jpeg"
+                        alt="Foto Andrew dan Arletta 6"
+                        onclick="openGallery(this)"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIGHTBOX -->
+
+        <div
+            class="gallery-lightbox"
+            id="galleryLightbox"
+            onclick="closeGallery()"
+        >
+
+            <button
+                class="close-gallery"
+                type="button"
+                onclick="event.stopPropagation(); closeGallery()"
+                aria-label="Tutup foto"
+            >
+                ×
+            </button>
+
+
+            <img
+                id="galleryImage"
+                src=""
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         LOVE STORY
+    ================================================== -->
+
+    <section
+        class="story-section"
+        id="story"
+    >
+
+        <div class="story-container">
+
+            <p class="section-label">
+                OUR JOURNEY
+            </p>
+
+
+            <h2 class="section-title">
+                Our Love Story
+            </h2>
+
+
+            <p class="story-description">
+                Every love story is beautiful,
+                but ours is our favorite.
+            </p>
+
+
+            <div class="timeline">
+
+                <!-- STORY 1 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        01
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <p class="timeline-date">
+                            2022
+                        </p>
+
+
+                        <h3>
+                            First Meet
+                        </h3>
+
+
+                        <p>
+                            Di sinilah cerita kami dimulai.
+                            Pertemuan sederhana yang kemudian
+                            menjadi awal dari perjalanan panjang
+                            kami bersama.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STORY 2 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        02
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <p class="timeline-date">
+                            2023
+                        </p>
+
+
+                        <h3>
+                            First Date
+                        </h3>
+
+
+                        <p>
+                            Dari sebuah pertemuan,
+                            kami mulai mengenal satu sama lain
+                            dan menciptakan banyak kenangan
+                            yang indah.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STORY 3 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        03
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <p class="timeline-date">
+                            2025
+                        </p>
+
+
+                        <h3>
+                            The Proposal
+                        </h3>
+
+
+                        <p>
+                            Dengan penuh kasih dan keyakinan,
+                            kami memutuskan untuk melangkah
+                            ke perjalanan yang lebih serius.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STORY 4 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        04
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <p class="timeline-date">
+                            2026
+                        </p>
+
+
+                        <h3>
+                            Our Wedding
+                        </h3>
+
+
+                        <p>
+                            Dan akhirnya, kami sampai pada
+                            hari yang selama ini kami nantikan.
+                            Sebuah awal baru untuk selamanya.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="story-ending">
+
+                <span>
+                    ♡
+                </span>
+
+                <p>
+                    And the best is yet to come.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RSVP
+    ================================================== -->
+
+    <section
+        class="rsvp-section"
+        id="rsvp"
+    >
+
+        <div class="rsvp-container">
+
+            <p class="section-label">
+                RSVP
+            </p>
+
+
+            <h2 class="section-title">
+                Will You Join Us?
+            </h2>
+
+
+            <p class="rsvp-description">
+                Kehadiran dan doa restu Anda merupakan
+                kebahagiaan bagi kami.
+            </p>
+
+
+            <!-- RSVP FORM -->
+
+            <form id="rsvpForm">
+
+                <!-- NAMA -->
+
+                <div class="form-group">
+
+                    <label for="guestNameRsvp">
+                        NAMA TAMU
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="guestNameRsvp"
+                        placeholder="Masukkan nama Anda"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="form-group">
+
+                    <label for="guestPhone">
+                        NOMOR WHATSAPP
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="guestPhone"
+                        placeholder="08xxxxxxxxxx"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- KEHADIRAN -->
+
+                <div class="form-group">
+
+                    <label>
+                        KONFIRMASI KEHADIRAN
+                    </label>
+
+
+                    <div class="attendance-options">
+
+                        <label class="attendance-option">
+
+                            <input
+                                type="radio"
+                                name="attendance"
+                                value="Hadir"
+                                required
+                            >
+
+                            <span>
+                                ✓ Ya, saya akan hadir
+                            </span>
+
+                        </label>
+
+
+                        <label class="attendance-option">
+
+                            <input
+                                type="radio"
+                                name="attendance"
+                                value="Tidak Hadir"
+                            >
+
+                            <span>
+                                × Maaf, saya tidak dapat hadir
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JUMLAH TAMU -->
+
+                <div
+                    class="form-group"
+                    id="guestCountGroup"
+                >
+
+                    <label for="guestCount">
+                        JUMLAH TAMU
+                    </label>
+
+
+                    <select id="guestCount">
+
+                        <option value="1">
+                            1 Orang
+                        </option>
+
+                        <option value="2">
+                            2 Orang
+                        </option>
+
+                        <option value="3">
+                            3 Orang
+                        </option>
+
+                        <option value="4">
+                            4 Orang
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="rsvp-button"
+                >
+                    KONFIRMASI KEHADIRAN
+                </button>
+
+            </form>
+
+
+            <!-- RSVP SUCCESS -->
+
+            <div
+                class="rsvp-success"
+                id="rsvpSuccess"
+            >
+
+                <div class="success-heart">
+                    ♡
+                </div>
+
+
+                <h3>
+                    Terima Kasih
+                </h3>
+
+
+                <p>
+                    Konfirmasi kehadiran Anda
+                    telah diterima.
+                </p>
+
+
+                <p
+                    class="success-name"
+                    id="successName"
+                >
+                </p>
+
+
+                <!-- QR CODE -->
+
+             
+                <div
+    class="qr-area"
+    id="qrArea"
+>
+
+    <p class="qr-title">
+        YOUR RSVP QR CODE
+    </p>
+
+
+    <p class="guest-id">
+        GUEST ID:
+        <strong id="guestId">
+            -
+        </strong>
+    </p>
+
+
+    <!-- QR CODE -->
+    <div class="qr-wrapper">
+
+        <div id="qrcode"></div>
+
+    </div>
+
+
+    <!-- DOWNLOAD BUTTON -->
+    <button
+        type="button"
+        id="downloadQrButton"
+        onclick="downloadQRCode()"
+    >
+        ↓ DOWNLOAD QR CODE
+    </button>
+
+
+</div>
+
+
+                    <p class="qr-info">
+                        Tunjukkan QR Code ini saat
+                        melakukan check-in di hari
+                        pernikahan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- =============================== -->
+<!-- WEDDING WISHES -->
+<!-- =============================== -->
+
+<section class="wishes-section" id="wishes">
+
+    <div class="wishes-container">
+
+        <p class="section-label">
+            WEDDING WISHES
+        </p>
+
+        <h2 class="section-title">
+            Ucapan & Doa
+        </h2>
+
+        <p class="wishes-description">
+            Berikan ucapan dan doa terbaik
+            untuk perjalanan cinta kami.
+        </p>
+
+
+        <!-- FORM UCAPAN -->
+
+        <div class="wishes-form">
+
+            <div class="form-group">
+
+                <label for="wishName">
+                    NAMA
+                </label>
+
+                <input
+                    type="text"
+                    id="wishName"
+                    placeholder="Nama Anda"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="wishMessage">
+                    UCAPAN & DOA
+                </label>
+
+                <textarea
+                    id="wishMessage"
+                    rows="4"
+                    placeholder="Tuliskan ucapan dan doa untuk kami..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="wish-button"
+                onclick="sendWish()"
+            >
+                KIRIM UCAPAN ♡
+            </button>
+
+        </div>
+
+
+        <!-- DAFTAR UCAPAN -->
+
+        <div
+            class="wishes-list"
+            id="wishesList"
+        >
+
+            <div class="wish-card">
+
+                <div class="wish-heart">
+                    ♡
+                </div>
+
+                <h3>
+                    Wedding Wishes
+                </h3>
+
+                <p>
+                    Doa dan ucapan dari keluarga
+                    dan sahabat akan tampil di sini.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==================================================
+         JAVASCRIPT LIBRARIES
+    ================================================== -->
+
+    <!-- QR Code Library -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
+
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

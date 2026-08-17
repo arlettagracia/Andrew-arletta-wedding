@@ -1,0 +1,9975 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f1e7;
+    color: #4b3b2b;
+}
+
+
+/* ============================= */
+/* COVER */
+/* ============================= */
+
+.cover {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffaf2 0%,
+            #f7f0e5 55%,
+            #eadfce 100%
+        );
+}
+
+
+/* ============================= */
+/* COVER CONTENT */
+/* ============================= */
+
+.cover-content {
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 30px;
+}
+
+
+/* ============================= */
+/* SMALL TITLE */
+/* ============================= */
+
+.small-title {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #a8864b;
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* NAMA MEMPELAI */
+/* ============================= */
+
+.cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(55px, 12vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    color: #9b773b;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================= */
+/* SIMBOL & */
+/* ============================= */
+
+.cover h1 span {
+    display: block;
+
+    font-size: 45px;
+
+    font-weight: 300;
+
+    margin: 15px 0;
+
+    color: #b89452;
+}
+
+
+/* ============================= */
+/* GOLD LINE */
+/* ============================= */
+
+.gold-line {
+    width: 100px;
+    height: 1px;
+
+    background-color: #b89452;
+
+    margin: 30px auto;
+}
+
+
+/* ============================= */
+/* DATE */
+/* ============================= */
+
+.date {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #765f43;
+
+    margin-bottom: 40px;
+}
+
+
+/* ============================= */
+/* GUEST BOX */
+/* ============================= */
+
+.guest-box {
+    margin-bottom: 30px;
+}
+
+
+.guest-label {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #8c7963;
+
+    margin-bottom: 8px;
+}
+
+
+.guest-name {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    color: #604a32;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.open-button {
+    border: 1px solid #b89452;
+
+    background-color: transparent;
+
+    color: #8f6e38;
+
+    padding: 14px 28px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.open-button:hover {
+    background-color: #b89452;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* FLOWER DECORATION */
+/* ============================= */
+
+.flower {
+    position: absolute;
+
+    font-size: 180px;
+
+    color: #b89452;
+
+    opacity: 0.12;
+
+    font-family: serif;
+
+    z-index: 1;
+}
+
+
+/* BUNGA KIRI ATAS */
+
+.flower-top-left {
+    top: -50px;
+    left: -50px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* BUNGA KANAN BAWAH */
+
+.flower-bottom-right {
+    bottom: -50px;
+    right: -50px;
+
+    transform: rotate(25deg);
+}
+
+
+/* ============================= */
+/* WELCOME SECTION */
+/* ============================= */
+
+.welcome {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-color: #fffaf3;
+}
+
+
+.welcome-small {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #a8864b;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    color: #8f6e38;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome p:last-child {
+    max-width: 500px;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    color: #6f6254;
+}
+
+
+/* ============================= */
+/* RESPONSIVE HP */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .cover h1 {
+        font-size: 58px;
+    }
+
+    .cover h1 span {
+        font-size: 35px;
+    }
+
+    .flower {
+        font-size: 120px;
+    }
+
+    .date {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+}
+
+/* ================================= */
+/* COUPLE SECTION */
+/* ================================= */
+
+.couple-section {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fffaf3 0%,
+            #f8f0e5 55%,
+            #eee2d0 100%
+        );
+
+    padding: 100px 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CONTAINER */
+
+.couple-container {
+    max-width: 650px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* LABEL */
+
+.section-label {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #a8864b;
+
+    margin-bottom: 15px;
+}
+
+
+/* TITLE */
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    color: #8f6e38;
+
+    margin-bottom: 20px;
+}
+
+
+.section-title span {
+    font-size: 38px;
+
+    color: #b89452;
+
+    margin: 0 5px;
+}
+
+
+/* DESCRIPTION */
+
+.section-description {
+    max-width: 480px;
+
+    margin: 0 auto 60px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #766a5d;
+}
+
+
+/* ================================= */
+/* COUPLE CARD */
+/* ================================= */
+
+.couple-card {
+    margin: 30px auto;
+
+    max-width: 400px;
+}
+
+
+/* ================================= */
+/* PHOTO FRAME */
+/* ================================= */
+
+.photo-frame {
+    width: 220px;
+
+    height: 280px;
+
+    margin: 0 auto 25px;
+
+    padding: 8px;
+
+    border: 1px solid #b89452;
+
+    background: #fffaf3;
+
+    box-shadow:
+        0 10px 30px rgba(90, 70, 40, 0.12);
+
+    transform: rotate(-2deg);
+}
+
+
+/* FOTO SEMENTARA */
+
+.photo-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee2d0,
+            #fffaf3
+        );
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 80px;
+
+    color: #b89452;
+}
+
+
+/* ================================= */
+/* ROLE */
+/* ================================= */
+
+.couple-role {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #a8864b;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================= */
+/* NAMA */
+/* ================================= */
+
+.couple-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #604a32;
+
+    margin-bottom: 12px;
+}
+
+
+/* ================================= */
+/* ORANG TUA */
+/* ================================= */
+
+.parents {
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================= */
+/* INSTAGRAM */
+/* ================================= */
+
+.instagram {
+    color: #9b773b;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid #b89452;
+
+    padding-bottom: 3px;
+}
+
+
+/* ================================= */
+/* DIVIDER */
+/* ================================= */
+
+.couple-divider {
+    margin: 45px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.couple-divider::before,
+.couple-divider::after {
+
+    content: "";
+
+    width: 80px;
+
+    height: 1px;
+
+    background-color: #c5a873;
+
+    opacity: 0.6;
+}
+
+
+.couple-divider span {
+
+    margin: 0 20px;
+
+    color: #b89452;
+
+    font-size: 25px;
+}
+
+
+/* ================================= */
+/* QUOTE */
+/* ================================= */
+
+.love-quote {
+
+    margin-top: 70px;
+
+    padding: 30px 20px;
+
+    border-top: 1px solid rgba(184, 148, 82, 0.3);
+
+    border-bottom: 1px solid rgba(184, 148, 82, 0.3);
+}
+
+
+.love-quote p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    color: #806a4d;
+}
+
+/* ================================= */
+/* SAVE THE DATE */
+/* ================================= */
+
+.save-date {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf3 0%,
+            #f5ecdf 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CONTAINER */
+
+.save-date-container {
+
+    max-width: 700px;
+
+    width: 100%;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* TITLE */
+
+.save-date h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    color: #8f6e38;
+
+    margin-bottom: 20px;
+}
+
+
+/* DESCRIPTION */
+
+.save-date-text {
+
+    max-width: 450px;
+
+    margin: 0 auto 45px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* WEDDING DATE */
+/* ================================= */
+
+.wedding-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+
+
+.date-day {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 85px;
+
+    line-height: 0.9;
+
+    color: #9b773b;
+
+    font-weight: 400;
+}
+
+
+.date-month {
+
+    font-size: 13px;
+
+    letter-spacing: 6px;
+
+    color: #806a4d;
+
+    margin-top: 15px;
+}
+
+
+.date-year {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    color: #a8864b;
+
+    margin-top: 5px;
+}
+
+
+/* ================================= */
+/* COUNTDOWN */
+/* ================================= */
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* BOX */
+
+.countdown-box {
+
+    width: 105px;
+
+    min-height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid rgba(184, 148, 82, 0.5);
+
+    background: rgba(255, 250, 243, 0.7);
+
+    box-shadow:
+        0 8px 25px rgba(90, 70, 40, 0.08);
+}
+
+
+/* ANGKA */
+
+.countdown-box span {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 40px;
+
+    color: #8f6e38;
+
+    line-height: 1;
+}
+
+
+/* LABEL */
+
+.countdown-box small {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #8c7963;
+
+    margin-top: 10px;
+}
+
+
+/* ================================= */
+/* DECORATION */
+/* ================================= */
+
+.save-date-decoration {
+
+    font-size: 25px;
+
+    color: #b89452;
+
+    margin-top: 50px;
+
+    opacity: 0.8;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .save-date h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .date-day {
+
+        font-size: 75px;
+
+    }
+
+
+    .countdown {
+
+        gap: 8px;
+
+    }
+
+
+    .countdown-box {
+
+        width: 78px;
+
+        min-height: 90px;
+
+    }
+
+
+    .countdown-box span {
+
+        font-size: 32px;
+
+    }
+
+
+    .countdown-box small {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+    }
+
+}
+
+/* ================================= */
+/* WEDDING EVENT */
+/* ================================= */
+
+.event-section {
+
+    min-height: 100vh;
+
+    padding: 100px 25px;
+
+    background-color: #fffaf3;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CONTAINER */
+
+.event-container {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* DESCRIPTION */
+
+.event-description {
+
+    max-width: 450px;
+
+    margin: 0 auto 55px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* EVENT CARD */
+/* ================================= */
+
+.event-card {
+
+    max-width: 470px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f6ecde
+        );
+
+    border: 1px solid rgba(184, 148, 82, 0.45);
+
+    box-shadow:
+        0 15px 40px rgba(80, 60, 35, 0.08);
+
+    position: relative;
+}
+
+
+/* ================================= */
+/* ICON */
+/* ================================= */
+
+.event-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid #b89452;
+
+    border-radius: 50%;
+
+    color: #b89452;
+
+    font-size: 23px;
+}
+
+
+/* ================================= */
+/* EVENT TYPE */
+/* ================================= */
+
+.event-type {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #a8864b;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================= */
+/* EVENT TITLE */
+/* ================================= */
+
+.event-card h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    color: #604a32;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================= */
+/* GOLD LINE */
+/* ================================= */
+
+.event-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    margin: 0 auto 25px;
+
+    background-color: #b89452;
+}
+
+
+/* ================================= */
+/* DATE */
+/* ================================= */
+
+.event-date {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    color: #806a4d;
+
+    margin-bottom: 5px;
+}
+
+
+/* ================================= */
+/* TIME */
+/* ================================= */
+
+.event-time {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #9b773b;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================= */
+/* LOCATION */
+/* ================================= */
+
+.event-place {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+
+    margin-bottom: 30px;
+}
+
+
+.event-place strong {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: #604a32;
+}
+
+
+/* ================================= */
+/* GOOGLE MAPS BUTTON */
+/* ================================= */
+
+.maps-button {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: 1px solid #b89452;
+
+    color: #8f6e38;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: all 0.3s ease;
+}
+
+
+.maps-button:hover {
+
+    background-color: #b89452;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================= */
+/* EVENT DIVIDER */
+/* ================================= */
+
+.event-divider {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 45px 0;
+}
+
+
+.event-divider::before,
+.event-divider::after {
+
+    content: "";
+
+    width: 80px;
+
+    height: 1px;
+
+    background-color: #c5a873;
+
+    opacity: 0.5;
+}
+
+
+.event-divider span {
+
+    margin: 0 20px;
+
+    color: #b89452;
+
+    font-size: 16px;
+}
+
+
+/* ================================= */
+/* NOTE */
+/* ================================= */
+
+.event-note {
+
+    margin-top: 55px;
+
+    padding: 25px;
+
+    border-top: 1px solid rgba(184, 148, 82, 0.3);
+
+    border-bottom: 1px solid rgba(184, 148, 82, 0.3);
+}
+
+
+.event-note p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    color: #806a4d;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .event-section {
+
+        padding: 80px 18px;
+
+    }
+
+
+    .event-card {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .event-card h3 {
+
+        font-size: 40px;
+
+    }
+
+
+    .event-date {
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* ================================= */
+/* GALLERY */
+/* ================================= */
+
+.gallery-section {
+
+    min-height: 100vh;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7efe3,
+            #fffaf3
+        );
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* CONTAINER */
+
+.gallery-container {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* DESCRIPTION */
+
+.gallery-description {
+
+    max-width: 450px;
+
+    margin: 0 auto 50px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* GALLERY GRID */
+/* ================================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    grid-auto-rows: 280px;
+
+    gap: 12px;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* ================================= */
+/* GALLERY ITEM */
+/* ================================= */
+
+.gallery-item {
+
+    overflow: hidden;
+
+    position: relative;
+
+    background-color: #eee2d0;
+
+    cursor: pointer;
+}
+
+
+/* FOTO BESAR */
+
+.gallery-large {
+
+    grid-row: span 2;
+}
+
+
+/* ================================= */
+/* IMAGE */
+/* ================================= */
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* HOVER */
+
+.gallery-item:hover img {
+
+    transform: scale(1.07);
+
+    filter: brightness(0.85);
+}
+
+
+/* ================================= */
+/* LIGHTBOX */
+/* ================================= */
+
+.gallery-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(30, 24, 18, 0.92);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    z-index: 9999;
+
+    cursor: zoom-out;
+}
+
+
+/* LIGHTBOX AKTIF */
+
+.gallery-lightbox.active {
+
+    display: flex;
+}
+
+
+/* FOTO LIGHTBOX */
+
+.gallery-lightbox img {
+
+    max-width: 90%;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================= */
+/* CLOSE BUTTON */
+/* ================================= */
+
+.close-gallery {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid #d6bd8d;
+
+    background: transparent;
+
+    color: #f5e8ce;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+
+.close-gallery:hover {
+
+    background: #b89452;
+
+    color: white;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+
+        padding: 80px 15px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        grid-auto-rows: 180px;
+
+        gap: 8px;
+
+    }
+
+
+    .gallery-lightbox {
+
+        padding: 15px;
+
+    }
+
+
+    .gallery-lightbox img {
+
+        max-width: 95%;
+
+        max-height: 80vh;
+
+    }
+
+
+    .close-gallery {
+
+        top: 15px;
+
+        right: 15px;
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+}
+
+/* ================================= */
+/* LOVE STORY */
+/* ================================= */
+
+.story-section {
+
+    min-height: 100vh;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf3,
+            #f5ecdf
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CONTAINER */
+
+.story-container {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* DESCRIPTION */
+
+.story-description {
+
+    max-width: 450px;
+
+    margin: 0 auto 70px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* TIMELINE */
+/* ================================= */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+
+/* GARIS TENGAH */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background-color: #c9ae7a;
+
+    transform: translateX(-50%);
+
+    opacity: 0.6;
+}
+
+
+/* ================================= */
+/* TIMELINE ITEM */
+/* ================================= */
+
+.timeline-item {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 70px;
+
+    position: relative;
+}
+
+
+/* ITEM GENAP */
+
+.timeline-item:nth-child(even) {
+
+    flex-direction: row-reverse;
+
+}
+
+
+/* ================================= */
+/* DOT */
+/* ================================= */
+
+.timeline-dot {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: #fffaf3;
+
+    border: 1px solid #b89452;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    color: #9b773b;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+}
+
+
+/* ================================= */
+/* CONTENT */
+/* ================================= */
+
+.timeline-content {
+
+    width: 42%;
+
+    padding: 25px;
+
+    background-color: rgba(255, 250, 243, 0.8);
+
+    border: 1px solid rgba(184, 148, 82, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(80, 60, 35, 0.05);
+}
+
+
+/* DATE */
+
+.timeline-date {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #a8864b;
+
+    margin-bottom: 8px;
+}
+
+
+/* TITLE */
+
+.timeline-content h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #604a32;
+
+    margin-bottom: 10px;
+}
+
+
+/* TEXT */
+
+.timeline-content p:last-child {
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* ENDING */
+/* ================================= */
+
+.story-ending {
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+.story-ending span {
+
+    display: block;
+
+    color: #b89452;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.story-ending p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #806a4d;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .story-section {
+
+        padding: 80px 18px;
+
+    }
+
+
+    .timeline::before {
+
+        left: 25px;
+
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+
+        flex-direction: row;
+
+        justify-content: flex-end;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .timeline-dot {
+
+        left: 25px;
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 16px;
+
+    }
+
+
+    .timeline-content {
+
+        width: calc(100% - 70px);
+
+        padding: 20px;
+
+    }
+
+
+    .timeline-content h3 {
+
+        font-size: 27px;
+
+    }
+
+}
+
+/* ================================= */
+/* RSVP */
+/* ================================= */
+
+.rsvp-section {
+
+    min-height: 100vh;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5ecdf,
+            #fffaf3
+        );
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* CONTAINER */
+
+.rsvp-container {
+
+    max-width: 550px;
+
+    margin: 0 auto;
+}
+
+
+/* DESCRIPTION */
+
+.rsvp-description {
+
+    max-width: 420px;
+
+    margin: 0 auto 50px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+}
+
+
+/* ================================= */
+/* FORM */
+/* ================================= */
+
+#rsvpForm {
+
+    text-align: left;
+
+    padding: 40px 35px;
+
+    background:
+        rgba(255, 250, 243, 0.8);
+
+    border: 1px solid
+        rgba(184, 148, 82, 0.4);
+
+    box-shadow:
+        0 15px 40px
+        rgba(80, 60, 35, 0.07);
+}
+
+
+/* ================================= */
+/* FORM GROUP */
+/* ================================= */
+
+.form-group {
+
+    margin-bottom: 28px;
+}
+
+
+/* ================================= */
+/* LABEL */
+/* ================================= */
+
+.form-group > label {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #8f6e38;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================= */
+/* INPUT & SELECT */
+/* ================================= */
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-bottom: 1px solid
+        rgba(184, 148, 82, 0.6);
+
+    background: transparent;
+
+    outline: none;
+
+    color: #604a32;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+
+.form-group input::placeholder {
+
+    color: #b5a99a;
+
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-bottom-color: #9b773b;
+
+}
+
+
+/* ================================= */
+/* ATTENDANCE */
+/* ================================= */
+
+.attendance-options {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.attendance-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    border: 1px solid
+        rgba(184, 148, 82, 0.25);
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    color: #75685a;
+
+    transition: 0.3s;
+}
+
+
+.attendance-option:hover {
+
+    border-color: #b89452;
+
+    background:
+        rgba(184, 148, 82, 0.05);
+}
+
+
+.attendance-option input {
+
+    accent-color: #b89452;
+}
+
+
+/* ================================= */
+/* BUTTON */
+/* ================================= */
+
+.rsvp-button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: 1px solid #b89452;
+
+    background: #b89452;
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.rsvp-button:hover {
+
+    background: transparent;
+
+    color: #8f6e38;
+}
+
+/* ================================= */
+/* RSVP SUCCESS CARD */
+/* ================================= */
+
+.rsvp-success {
+
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 45px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.96),
+            rgba(250,245,237,0.96)
+        );
+
+    border:
+        1px solid
+        rgba(184,148,82,0.38);
+
+    box-shadow:
+        0 18px 45px
+        rgba(80,60,35,0.10);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ORNAMEN GOLD */
+
+.rsvp-success::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 22px;
+
+    color: #b89452;
+
+    font-size: 14px;
+
+    opacity: 0.6;
+
+}
+
+
+.rsvp-success::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    right: 22px;
+
+    color: #b89452;
+
+    font-size: 14px;
+
+    opacity: 0.6;
+
+}
+
+
+.rsvp-success.active {
+
+    display: block;
+
+}
+
+
+/* ================================= */
+/* HEART */
+/* ================================= */
+
+.success-heart {
+
+    font-size: 32px;
+
+    color: #b89452;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* ================================= */
+/* TITLE */
+/* ================================= */
+
+.rsvp-success h3 {
+
+    margin: 0 0 10px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    color: #604a32;
+
+}
+
+
+/* ================================= */
+/* TEXT */
+/* ================================= */
+
+.rsvp-success p {
+
+    margin: 6px 0;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #75685a;
+
+}
+
+
+/* ================================= */
+/* NAMA TAMU */
+/* ================================= */
+
+.success-name {
+
+    margin-top: 12px !important;
+
+    margin-bottom: 5px !important;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 23px !important;
+
+    color: #9b773b !important;
+
+}
+
+
+/* ================================= */
+/* GUEST ID */
+/* ================================= */
+
+.guest-id {
+
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #8c7b68;
+
+}
+
+
+.guest-id strong {
+
+    color: #9b773b;
+
+    font-weight: normal;
+
+}
+
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+
+        padding: 80px 18px;
+
+    }
+
+
+    #rsvpForm {
+
+        padding: 30px 20px;
+
+    }
+
+}
+
+/* ================================= */
+/* RSVP QR CODE */
+/* ================================= */
+
+.qr-area {
+
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid
+        rgba(184, 148, 82, 0.3);
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.qr-title {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #8f6e38;
+
+    margin-bottom: 20px;
+}
+
+
+/* QR WRAPPER */
+
+.qr-wrapper {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid
+        rgba(184, 148, 82, 0.5);
+
+    box-shadow:
+        0 10px 25px
+        rgba(80, 60, 35, 0.08);
+}
+
+
+/* QR */
+
+#qrcode {
+
+    width: 180px;
+
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* INFO */
+
+.qr-info {
+
+    max-width: 300px;
+
+    margin: 20px auto 0;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    color: #8c7b68;
+}
+
+
+/* ========================================
+   MUSIC BUTTON
+======================================== */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid #b89452;
+
+    background:
+        rgba(255, 250, 244, 0.95);
+
+    color: #8f6e38;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 6px 18px
+        rgba(80, 60, 35, 0.15);
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Hover */
+
+.music-button:hover {
+
+    transform:
+        scale(1.08);
+
+    background:
+        #8f6e38;
+
+    color:
+        white;
+
+}
+
+
+/* Saat musik aktif */
+
+.music-button.playing {
+
+    animation:
+        musicRotate 3s linear infinite;
+
+}
+
+
+/* Animasi */
+
+@keyframes musicRotate {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+/* =====================================================
+   🌸 ELEGANT FLORAL GOLD — GLOBAL WEDDING THEME
+===================================================== */
+
+/* -----------------------------------------------------
+   BACKGROUND UTAMA
+----------------------------------------------------- */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(184, 148, 82, 0.12),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(184, 148, 82, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(184, 148, 82, 0.09),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 88% 88%,
+            rgba(184, 148, 82, 0.11),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f3eb,
+            #fffdf9,
+            #f7f0e5
+        );
+
+    color: #5d4935;
+}
+
+
+/* -----------------------------------------------------
+   SEMUA SECTION
+----------------------------------------------------- */
+
+.cover,
+.couple-section,
+.save-date,
+.event-section,
+.gallery-section,
+.story-section,
+.rsvp-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* -----------------------------------------------------
+   ORNAMEN BUNGA EMAS
+----------------------------------------------------- */
+
+.cover::before,
+.cover::after,
+.couple-section::before,
+.couple-section::after,
+.save-date::before,
+.save-date::after,
+.event-section::before,
+.event-section::after,
+.gallery-section::before,
+.gallery-section::after,
+.story-section::before,
+.story-section::after,
+.rsvp-section::before,
+.rsvp-section::after {
+
+    position: absolute;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    font-family: Georgia, serif;
+
+    color: rgba(184, 148, 82, 0.20);
+
+    line-height: 1;
+
+}
+
+
+/* -----------------------------------------------------
+   BUNGA POJOK KIRI ATAS
+----------------------------------------------------- */
+
+.cover::before,
+.couple-section::before,
+.save-date::before,
+.event-section::before,
+.gallery-section::before,
+.story-section::before,
+.rsvp-section::before {
+
+    content: "❀";
+
+    top: -35px;
+
+    left: -20px;
+
+    font-size: 125px;
+
+    transform:
+        rotate(-18deg);
+
+    text-shadow:
+        8px 10px 0
+        rgba(184, 148, 82, 0.08);
+
+}
+
+
+/* -----------------------------------------------------
+   BUNGA POJOK KANAN BAWAH
+----------------------------------------------------- */
+
+.cover::after,
+.couple-section::after,
+.save-date::after,
+.event-section::after,
+.gallery-section::after,
+.story-section::after,
+.rsvp-section::after {
+
+    content: "❀";
+
+    right: -20px;
+
+    bottom: -40px;
+
+    font-size: 145px;
+
+    transform:
+        rotate(25deg);
+
+    text-shadow:
+        -8px -8px 0
+        rgba(184, 148, 82, 0.08);
+
+}
+
+
+/* -----------------------------------------------------
+   ISI SECTION DI ATAS ORNAMEN
+----------------------------------------------------- */
+
+.cover > *,
+.couple-section > *,
+.save-date > *,
+.event-section > *,
+.gallery-section > *,
+.story-section > *,
+.rsvp-section > * {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* -----------------------------------------------------
+   COVER — LEBIH MEWAH
+----------------------------------------------------- */
+
+.cover {
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,255,255,0.92),
+            rgba(247,241,232,0.96)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(184,148,82,0.20);
+
+}
+
+
+/* -----------------------------------------------------
+   GOLD FRAME COVER
+----------------------------------------------------- */
+
+.cover::marker {
+    display: none;
+}
+
+
+.cover-content {
+
+    position: relative;
+
+    padding:
+        45px 30px;
+
+}
+
+
+.cover-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 22px;
+
+    border:
+        1px solid
+        rgba(184,148,82,0.35);
+
+    pointer-events: none;
+
+}
+
+
+.cover-content::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 17px;
+
+    color: #b89452;
+
+}
+
+
+/* -----------------------------------------------------
+   GOLD LINE
+----------------------------------------------------- */
+
+.gold-line {
+
+    width: 85px;
+
+    height: 1px;
+
+    margin:
+        18px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b89452,
+            transparent
+        );
+
+}
+
+
+/* -----------------------------------------------------
+   NAMA MEMPELAI
+----------------------------------------------------- */
+
+.cover h1 {
+
+    color: #6d5435;
+
+    text-shadow:
+        0 1px 1px
+        rgba(184,148,82,0.12);
+
+}
+
+
+/* -----------------------------------------------------
+   LABEL KECIL
+----------------------------------------------------- */
+
+.small-title,
+.section-label,
+.couple-role,
+.event-type {
+
+    color: #a17b42;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* -----------------------------------------------------
+   SECTION TITLE
+----------------------------------------------------- */
+
+.section-title,
+.couple-section h2,
+.save-date h2,
+.event-section h2,
+.gallery-section h2,
+.story-section h2,
+.rsvp-section h2 {
+
+    color: #6d5435;
+
+}
+
+
+/* -----------------------------------------------------
+   CARD — GOLD GLASS
+----------------------------------------------------- */
+
+.couple-card,
+.event-card,
+.countdown-box,
+.rsvp-container,
+.gallery-item,
+.timeline-content {
+
+    border-color:
+        rgba(184,148,82,0.28);
+
+    box-shadow:
+        0 12px 35px
+        rgba(80,60,35,0.07);
+
+}
+
+
+/* -----------------------------------------------------
+   CARD HOVER
+----------------------------------------------------- */
+
+.couple-card:hover,
+.event-card:hover,
+.gallery-item:hover,
+.countdown-box:hover {
+
+    border-color:
+        rgba(184,148,82,0.48);
+
+    box-shadow:
+        0 18px 40px
+        rgba(80,60,35,0.11);
+
+}
+
+
+/* -----------------------------------------------------
+   TOMBOL GOLD
+----------------------------------------------------- */
+
+.open-button,
+.rsvp-button,
+.maps-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f6e38,
+            #b89452,
+            #8f6e38
+        );
+
+    border:
+        1px solid
+        rgba(184,148,82,0.55);
+
+    box-shadow:
+        0 8px 20px
+        rgba(143,110,56,0.20);
+
+}
+
+
+.open-button:hover,
+.rsvp-button:hover,
+.maps-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(143,110,56,0.28);
+
+}
+
+
+/* -----------------------------------------------------
+   PEMBATAS GOLD
+----------------------------------------------------- */
+
+.couple-divider,
+.event-divider,
+.save-date-decoration,
+.story-ending {
+
+    color: #b89452;
+
+}
+
+
+/* -----------------------------------------------------
+   INPUT RSVP
+----------------------------------------------------- */
+
+#rsvpForm input,
+#rsvpForm select {
+
+    border-color:
+        rgba(184,148,82,0.35);
+
+    background:
+        rgba(255,253,249,0.95);
+
+}
+
+
+#rsvpForm input:focus,
+#rsvpForm select:focus {
+
+    border-color:
+        #b89452;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184,148,82,0.10);
+
+}
+
+
+/* -----------------------------------------------------
+   QR CODE AREA
+----------------------------------------------------- */
+
+.qr-area {
+
+    border:
+        1px solid
+        rgba(184,148,82,0.30);
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf9,
+            #f8f1e6
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(80,60,35,0.08);
+
+}
+
+
+/* -----------------------------------------------------
+   GALLERY
+----------------------------------------------------- */
+
+.gallery-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.gallery-item::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 10px;
+
+    font-size: 16px;
+
+    color:
+        rgba(255,255,255,0.75);
+
+    text-shadow:
+        0 1px 5px
+        rgba(80,60,35,0.4);
+
+    pointer-events: none;
+
+}
+
+
+/* -----------------------------------------------------
+   MOBILE
+----------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .cover::before,
+    .couple-section::before,
+    .save-date::before,
+    .event-section::before,
+    .gallery-section::before,
+    .story-section::before,
+    .rsvp-section::before {
+
+        font-size: 90px;
+
+        top: -25px;
+
+        left: -25px;
+
+    }
+
+
+    .cover::after,
+    .couple-section::after,
+    .save-date::after,
+    .event-section::after,
+    .gallery-section::after,
+    .story-section::after,
+    .rsvp-section::after {
+
+        font-size: 105px;
+
+        right: -25px;
+
+        bottom: -30px;
+
+    }
+
+
+    .cover-content::before {
+
+        inset: 15px;
+
+    }
+
+}
+
+/* =====================================================
+   ✨ OPENING INVITATION ANIMATION
+===================================================== */
+
+.cover {
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s ease;
+}
+
+
+/* Saat cover dibuka */
+
+.cover.invitation-open {
+    opacity: 0;
+    transform: scale(1.04);
+    pointer-events: none;
+}
+
+
+/* Isi cover */
+
+.cover-content {
+    animation:
+        coverContentFade 1.4s ease both;
+}
+
+
+@keyframes coverContentFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   ✦ ANIMASI BUNGA
+===================================================== */
+
+.flower {
+
+    animation:
+        flowerFloat 5s ease-in-out infinite;
+
+}
+
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform:
+            rotate(-18deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(-12deg)
+            translateY(-8px);
+    }
+
+}
+
+
+/* =====================================================
+   GOLD LINE
+===================================================== */
+
+.gold-line {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.gold-line::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.9),
+            transparent
+        );
+
+    animation:
+        goldShine 3s ease-in-out infinite;
+
+}
+
+
+@keyframes goldShine {
+
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   TOMBOL BUKA UNDANGAN
+===================================================== */
+
+.open-button {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.open-button::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation:
+        buttonShine 4s ease-in-out infinite;
+
+}
+
+
+@keyframes buttonShine {
+
+    0% {
+        left: -120%;
+    }
+
+    35% {
+        left: 140%;
+    }
+
+    100% {
+        left: 140%;
+    }
+
+}
+
+
+/* =====================================================
+   TRANSISI KE ISI UNDANGAN
+===================================================== */
+
+.couple-section {
+
+    animation:
+        sectionReveal 1s ease both;
+
+}
+
+
+@keyframes sectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ========================================
+   MUSIC BUTTON — ELEGANT GOLD
+======================================== */
+
+.music-button {
+
+    position: fixed;
+
+    right: 24px;
+
+    bottom: 24px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(184, 148, 82, 0.65);
+
+    background:
+        rgba(255, 250, 243, 0.95);
+
+    color: #8f6e38;
+
+    font-size: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 8px 25px
+        rgba(80, 60, 35, 0.18);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+/* HOVER */
+
+.music-button:hover {
+
+    transform:
+        scale(1.08);
+
+    background:
+        #8f6e38;
+
+    color:
+        white;
+
+    box-shadow:
+        0 10px 28px
+        rgba(143, 110, 56, 0.28);
+
+}
+
+
+/* SAAT MUSIK OFF */
+
+.music-button.muted {
+
+    opacity: 0.75;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .music-button {
+
+        width: 46px;
+
+        height: 46px;
+
+        right: 16px;
+
+        bottom: 16px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* ========================================
+   ELEGANT GOLD FLOWER COVER
+======================================== */
+
+.cover {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(45, 35, 25, 0.25),
+            rgba(45, 35, 25, 0.35)
+        ),
+        url("assets/images/foto1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+
+
+/* Lapisan warna lembut */
+
+.cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.08),
+            rgba(0,0,0,0.35)
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   BUNGA GOLD
+======================================== */
+
+.flower {
+    position: absolute;
+    z-index: 2;
+
+    color: #d4af37;
+
+    font-size: 120px;
+
+    opacity: 0.75;
+
+    text-shadow:
+        0 0 10px rgba(212,175,55,0.4),
+        0 0 25px rgba(212,175,55,0.25);
+
+    pointer-events: none;
+}
+
+
+/* Bunga kiri atas */
+
+.flower-top-left {
+    top: -25px;
+    left: -25px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* Bunga kanan bawah */
+
+.flower-bottom-right {
+    bottom: -25px;
+    right: -25px;
+
+    transform: rotate(160deg);
+}
+
+
+/* ========================================
+   COVER CONTENT
+======================================== */
+
+.cover-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(90%, 600px);
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(212,175,55,0.45);
+
+    backdrop-filter: blur(4px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25);
+
+    animation: coverFadeIn 1.5s ease;
+}
+
+
+/* ========================================
+   JUDUL
+======================================== */
+
+.small-title {
+    margin-bottom: 18px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #f5df9a;
+}
+
+
+.cover h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 10vw, 95px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    color: #fff;
+
+    text-shadow:
+        0 3px 15px rgba(0,0,0,0.35);
+}
+
+
+.cover h1 span {
+    display: block;
+
+    margin: 12px 0;
+
+    font-size: 35px;
+
+    color: #d4af37;
+
+    font-style: italic;
+}
+
+
+/* ========================================
+   GOLD LINE
+======================================== */
+
+.gold-line {
+    width: 90px;
+
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #d4af37;
+
+    box-shadow:
+        0 0 10px rgba(212,175,55,0.6);
+}
+
+
+/* ========================================
+   DATE
+======================================== */
+
+.cover .date {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #f5df9a;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   GUEST BOX
+======================================== */
+
+.guest-box {
+    margin: 0 auto 25px;
+
+    padding: 15px 20px;
+
+    max-width: 320px;
+
+    border-top: 1px solid rgba(212,175,55,0.5);
+
+    border-bottom: 1px solid rgba(212,175,55,0.5);
+}
+
+
+.guest-label {
+    margin: 0 0 5px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #eee;
+}
+
+
+.guest-name {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: #f5df9a;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.open-button {
+    border: 1px solid #d4af37;
+
+    background: rgba(212,175,55,0.12);
+
+    color: #fff;
+
+    padding: 13px 30px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.open-button:hover {
+    background: #d4af37;
+
+    color: #2b2118;
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.45);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   ANIMASI COVER
+======================================== */
+
+@keyframes coverFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE HP
+======================================== */
+
+@media (max-width: 600px) {
+
+    .cover-content {
+        padding: 35px 18px;
+    }
+
+    .flower {
+        font-size: 80px;
+    }
+
+    .cover h1 {
+        font-size: 65px;
+    }
+
+    .cover h1 span {
+        font-size: 28px;
+    }
+
+}
+
+/* ========================================
+   BRIDE & GROOM
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.couple-section {
+    position: relative;
+    padding: 110px 20px;
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(190, 150, 70, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(190, 150, 70, 0.08),
+            transparent 28%
+        ),
+        #faf7f1;
+    overflow: hidden;
+}
+
+
+/* ORNAMEN BUNGA */
+
+.couple-section::before {
+    content: "✿";
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    font-size: 85px;
+    color: rgba(180, 135, 55, 0.18);
+    transform: rotate(-20deg);
+}
+
+
+.couple-section::after {
+    content: "✿";
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 85px;
+    color: rgba(180, 135, 55, 0.18);
+    transform: rotate(25deg);
+}
+
+
+/* CONTAINER */
+
+.couple-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* LABEL */
+
+.couple-section .section-label {
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #b18a45;
+    font-weight: 600;
+}
+
+
+/* TITLE */
+
+.couple-section .section-title {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #3e362d;
+}
+
+
+.couple-section .section-title span {
+    color: #b18a45;
+    font-style: italic;
+    margin: 0 8px;
+}
+
+
+/* DESCRIPTION */
+
+.couple-section .section-description {
+    max-width: 520px;
+    margin: 20px auto 60px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #776f66;
+}
+
+
+/* COUPLE CARD */
+
+.couple-card {
+    position: relative;
+    margin: 0 auto;
+    max-width: 360px;
+    text-align: center;
+}
+
+
+/* FOTO FRAME */
+
+.photo-frame {
+    position: relative;
+    width: 250px;
+    height: 330px;
+    margin: 0 auto 28px;
+
+    padding: 7px;
+
+    border: 1px solid #c5a05a;
+    background: #fffdf8;
+
+    box-shadow:
+        0 15px 40px rgba(75, 58, 35, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* FOTO */
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: saturate(0.92);
+}
+
+
+/* FRAME GOLD LUAR */
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+
+    border: 1px solid rgba(184, 142, 62, 0.35);
+
+    pointer-events: none;
+}
+
+
+/* ORNAMEN SUDUT */
+
+.photo-frame::after {
+    content: "✦";
+    position: absolute;
+
+    top: 8px;
+    right: 10px;
+
+    color: #d0aa61;
+    font-size: 18px;
+}
+
+
+/* ROLE */
+
+.couple-role {
+    margin: 0 0 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #b18a45;
+    font-weight: 600;
+}
+
+
+/* NAMA */
+
+.couple-card h3 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 500;
+
+    color: #3e362d;
+}
+
+
+/* ORANG TUA */
+
+.couple-card .parents {
+    margin: 12px 0 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #776f66;
+}
+
+
+/* INSTAGRAM */
+
+.couple-card .instagram {
+    display: inline-block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+
+    color: #b18a45;
+    text-decoration: none;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+
+.couple-card .instagram:hover {
+    color: #7d5b27;
+}
+
+
+/* DIVIDER */
+
+.couple-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 55px 0;
+
+    position: relative;
+}
+
+
+.couple-divider::before,
+.couple-divider::after {
+    content: "";
+
+    width: 100px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c5a05a
+    );
+}
+
+
+.couple-divider::after {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #c5a05a
+    );
+}
+
+
+.couple-divider span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin: 0 18px;
+
+    border: 1px solid #c5a05a;
+    border-radius: 50%;
+
+    color: #b18a45;
+
+    font-size: 20px;
+
+    background: #faf7f1;
+}
+
+
+/* QUOTE */
+
+.love-quote {
+    margin-top: 70px;
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(177, 138, 69, 0.25);
+}
+
+
+.love-quote p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-style: italic;
+
+    color: #8a7657;
+}
+
+
+/* ========================================
+   RESPONSIVE MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .couple-section {
+        padding: 85px 18px;
+    }
+
+
+    .couple-section::before {
+        top: 20px;
+        left: -5px;
+        font-size: 65px;
+    }
+
+
+    .couple-section::after {
+        bottom: 20px;
+        right: -5px;
+        font-size: 65px;
+    }
+
+
+    .couple-section .section-title {
+        font-size: 40px;
+    }
+
+
+    .couple-section .section-description {
+        font-size: 12px;
+        margin-bottom: 45px;
+    }
+
+
+    .photo-frame {
+        width: 210px;
+        height: 285px;
+    }
+
+
+    .couple-card h3 {
+        font-size: 34px;
+    }
+
+
+    .couple-divider {
+        margin: 45px 0;
+    }
+
+
+    .couple-divider::before,
+    .couple-divider::after {
+        width: 65px;
+    }
+
+
+    .love-quote {
+        margin-top: 55px;
+    }
+
+
+    .love-quote p {
+        font-size: 20px;
+    }
+
+}
+
+/* ========================================
+   BRIDE & GROOM
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.couple-section {
+    position: relative;
+    padding: 100px 20px 110px;
+    background:
+        radial-gradient(circle at 10% 15%,
+            rgba(212, 175, 55, 0.10),
+            transparent 25%),
+        radial-gradient(circle at 90% 85%,
+            rgba(212, 175, 55, 0.10),
+            transparent 25%),
+        linear-gradient(
+            180deg,
+            #fffdf9 0%,
+            #f8f1e7 50%,
+            #fffdf9 100%
+        );
+    overflow: hidden;
+}
+
+
+/* ========================================
+   DEKORASI BUNGA
+======================================== */
+
+.couple-section::before {
+    content: "✿";
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    font-size: 75px;
+    color: rgba(190, 150, 55, 0.22);
+    transform: rotate(-20deg);
+    font-family: Georgia, serif;
+}
+
+.couple-section::after {
+    content: "✿";
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 80px;
+    color: rgba(190, 150, 55, 0.22);
+    transform: rotate(25deg);
+    font-family: Georgia, serif;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.couple-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+
+.couple-section .section-label {
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #b08d35;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.couple-section .section-title {
+    margin: 0 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 8vw, 68px);
+    font-weight: 400;
+    color: #3f372e;
+    line-height: 1.1;
+}
+
+.couple-section .section-title span {
+    color: #c6a34b;
+    font-style: italic;
+    margin: 0 8px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.couple-section .section-description {
+    max-width: 600px;
+    margin: 0 auto 55px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+    color: #756b60;
+}
+
+
+/* ========================================
+   COUPLE CARD
+======================================== */
+
+.couple-card {
+    position: relative;
+    display: inline-block;
+    width: min(360px, 90%);
+    margin: 0 auto;
+    padding: 25px 20px 30px;
+    vertical-align: top;
+}
+
+
+/* ========================================
+   PHOTO FRAME
+======================================== */
+
+.photo-frame {
+    position: relative;
+    width: 250px;
+    height: 330px;
+    margin: 0 auto 25px;
+    padding: 7px;
+    border: 1px solid rgba(183, 145, 52, 0.75);
+    background: #fffaf2;
+    box-shadow:
+        0 15px 35px rgba(75, 57, 30, 0.15);
+}
+
+
+/* Frame bagian dalam */
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(183, 145, 52, 0.35);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* ========================================
+   FOTO
+======================================== */
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   SEMENTARA PLACEHOLDER
+======================================== */
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee3d2,
+            #fffaf2,
+            #e4d5bd
+        );
+
+    color: #b08d35;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 70px;
+    font-style: italic;
+}
+
+
+/* ========================================
+   GOLD CORNER DECORATION
+======================================== */
+
+.photo-frame::after {
+    content: "✦";
+    position: absolute;
+    right: -15px;
+    top: -15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b08d35;
+    background: #fffdf9;
+
+    border: 1px solid #c7a451;
+    border-radius: 50%;
+
+    font-size: 14px;
+    z-index: 3;
+}
+
+
+/* ========================================
+   ROLE
+======================================== */
+
+.couple-role {
+    margin: 15px 0 5px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #b08d35;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   NAME
+======================================== */
+
+.couple-card h3 {
+    margin: 0 0 12px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 500;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   PARENTS
+======================================== */
+
+.parents {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   INSTAGRAM
+======================================== */
+
+.instagram {
+    display: inline-block;
+    margin-top: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    color: #b08d35;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.instagram:hover {
+    color: #80631f;
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.couple-divider {
+    display: inline-flex;
+    width: 70px;
+    height: 70px;
+
+    align-items: center;
+    justify-content: center;
+
+    vertical-align: middle;
+
+    margin: 110px 10px 0;
+
+    border: 1px solid rgba(183, 145, 52, 0.45);
+    border-radius: 50%;
+
+    background: rgba(255, 253, 249, 0.8);
+
+    box-shadow:
+        0 5px 20px rgba(80, 60, 30, 0.08);
+}
+
+.couple-divider span {
+    color: #b08d35;
+    font-size: 27px;
+}
+
+
+/* ========================================
+   LOVE QUOTE
+======================================== */
+
+.love-quote {
+    margin: 55px auto 0;
+    max-width: 550px;
+}
+
+.love-quote p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-style: italic;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   RESPONSIVE MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .couple-section {
+        padding: 80px 15px 90px;
+    }
+
+    .couple-card {
+        display: block;
+        width: 100%;
+        padding: 15px 10px 25px;
+    }
+
+    .couple-divider {
+        display: flex;
+        margin: 5px auto 20px;
+    }
+
+    .photo-frame {
+        width: 220px;
+        height: 290px;
+    }
+
+    .couple-section::before {
+        font-size: 55px;
+        left: 5px;
+    }
+
+    .couple-section::after {
+        font-size: 60px;
+        right: 5px;
+    }
+
+    .love-quote {
+        margin-top: 40px;
+    }
+
+    .love-quote p {
+        font-size: 21px;
+    }
+}
+
+/* ========================================
+   SAVE THE DATE
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.save-date {
+    position: relative;
+    padding: 110px 20px 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(196, 157, 68, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(196, 157, 68, 0.12),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #fffdf9 0%,
+            #f5ecdf 50%,
+            #fffdf9 100%
+        );
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.save-date::before {
+    content: "✿";
+    position: absolute;
+
+    top: 35px;
+    left: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 95px;
+
+    color: rgba(190, 150, 55, 0.18);
+
+    transform: rotate(-20deg);
+}
+
+
+.save-date::after {
+    content: "✿";
+    position: absolute;
+
+    bottom: 35px;
+    right: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 100px;
+
+    color: rgba(190, 150, 55, 0.18);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.save-date-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.save-date .section-label {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    color: #b08d35;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.save-date h2 {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 8vw, 70px);
+
+    font-weight: 400;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.save-date-text {
+    max-width: 500px;
+
+    margin: 0 auto 45px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   WEDDING DATE
+======================================== */
+
+.wedding-date {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 0 auto 45px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #4a4136;
+}
+
+
+/* DAY */
+
+.date-day {
+    font-size: 70px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #b08d35;
+}
+
+
+/* MONTH */
+
+.date-month {
+    padding-left: 15px;
+
+    border-left: 1px solid
+        rgba(176, 141, 53, 0.5);
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+/* YEAR */
+
+.date-year {
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+}
+
+
+/* ========================================
+   COUNTDOWN BOX
+======================================== */
+
+.countdown-box {
+    position: relative;
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 253, 249, 0.85);
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.45);
+
+    box-shadow:
+        0 12px 30px
+        rgba(75, 55, 30, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+/* INNER FRAME */
+
+.countdown-box::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.20);
+
+    pointer-events: none;
+}
+
+
+/* HOVER */
+
+.countdown-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(75, 55, 30, 0.14);
+}
+
+
+/* NUMBER */
+
+.countdown-box span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    color: #b08d35;
+
+    font-weight: 500;
+}
+
+
+/* LABEL */
+
+.countdown-box small {
+    margin-top: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   DECORATION
+======================================== */
+
+.save-date-decoration {
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-top: 5px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.5);
+
+    border-radius: 50%;
+
+    color: #b08d35;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   DECORATIVE LINES
+======================================== */
+
+.save-date-decoration::before,
+.save-date-decoration::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+        rgba(176, 141, 53, 0.35);
+}
+
+
+.save-date-decoration::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+
+.save-date-decoration::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .save-date {
+        padding: 85px 15px 95px;
+    }
+
+
+    .save-date::before {
+        font-size: 65px;
+        left: -5px;
+    }
+
+
+    .save-date::after {
+        font-size: 70px;
+        right: -5px;
+    }
+
+
+    .wedding-date {
+        gap: 10px;
+    }
+
+
+    .date-day {
+        font-size: 55px;
+    }
+
+
+    .date-month {
+        padding-left: 10px;
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+
+    .date-year {
+        font-size: 19px;
+    }
+
+
+    .countdown {
+        gap: 9px;
+    }
+
+
+    .countdown-box {
+        width: 78px;
+        height: 90px;
+    }
+
+
+    .countdown-box span {
+        font-size: 32px;
+    }
+
+
+    .countdown-box small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+
+    .save-date-decoration::before,
+    .save-date-decoration::after {
+        width: 45px;
+    }
+
+}
+
+/* ========================================
+   WEDDING EVENT
+   ELEGANT GOLD
+======================================== */
+
+.event-section {
+    position: relative;
+    padding: 110px 20px 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        #fffdf9;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.event-section::before {
+    content: "✿";
+
+    position: absolute;
+    top: 35px;
+    left: 15px;
+
+    font-family: Georgia, serif;
+    font-size: 90px;
+
+    color: rgba(190, 150, 55, 0.17);
+
+    transform: rotate(-20deg);
+}
+
+
+.event-section::after {
+    content: "✿";
+
+    position: absolute;
+    bottom: 35px;
+    right: 15px;
+
+    font-family: Georgia, serif;
+    font-size: 95px;
+
+    color: rgba(190, 150, 55, 0.17);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.event-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.event-section .section-label {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    color: #b08d35;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.event-section .section-title {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 8vw, 68px);
+
+    font-weight: 400;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.event-description {
+    max-width: 570px;
+
+    margin: 0 auto 55px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   EVENT CARD
+======================================== */
+
+.event-card {
+    position: relative;
+
+    max-width: 570px;
+
+    margin: 0 auto;
+
+    padding: 45px 35px 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.95),
+            rgba(248,239,226,0.8)
+        );
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.45);
+
+    box-shadow:
+        0 18px 45px
+        rgba(70, 50, 25, 0.10);
+}
+
+
+/* INNER FRAME */
+
+.event-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.20);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.event-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.55);
+
+    border-radius: 50%;
+
+    color: #b08d35;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    background: #fffdf9;
+}
+
+
+/* ========================================
+   EVENT TYPE
+======================================== */
+
+.event-type {
+    margin: 0 0 7px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   EVENT NAME
+======================================== */
+
+.event-card h3 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   GOLD LINE
+======================================== */
+
+.event-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 18px auto 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b08d35,
+            transparent
+        );
+}
+
+
+/* ========================================
+   DATE
+======================================== */
+
+.event-date {
+    margin: 0 0 7px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #5e554b;
+}
+
+
+/* ========================================
+   TIME
+======================================== */
+
+.event-time {
+    margin: 0 0 22px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    color: #b08d35;
+
+    font-weight: 500;
+}
+
+
+/* ========================================
+   PLACE
+======================================== */
+
+.event-place {
+    margin: 0 auto 28px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+.event-place strong {
+    font-size: 13px;
+
+    color: #4b4238;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   GOOGLE MAPS BUTTON
+======================================== */
+
+.maps-button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border: 1px solid
+        #b08d35;
+
+    color: #9b7828;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.maps-button:hover {
+    background: #b08d35;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   EVENT DIVIDER
+======================================== */
+
+.event-divider {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 35px auto;
+
+    width: 100%;
+}
+
+
+.event-divider::before,
+.event-divider::after {
+    content: "";
+
+    width: 100px;
+
+    height: 1px;
+
+    background:
+        rgba(176, 141, 53, 0.35);
+}
+
+
+.event-divider span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin: 0 15px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.45);
+
+    border-radius: 50%;
+
+    color: #b08d35;
+
+    font-size: 14px;
+
+    background: #fffdf9;
+}
+
+
+/* ========================================
+   EVENT NOTE
+======================================== */
+
+.event-note {
+    max-width: 500px;
+
+    margin: 50px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid
+        rgba(176, 141, 53, 0.25);
+}
+
+
+.event-note p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .event-section {
+        padding: 85px 15px 95px;
+    }
+
+    .event-section::before {
+        font-size: 60px;
+        left: -5px;
+    }
+
+    .event-section::after {
+        font-size: 65px;
+        right: -5px;
+    }
+
+    .event-card {
+        padding: 40px 25px 45px;
+    }
+
+    .event-card h3 {
+        font-size: 36px;
+    }
+
+    .event-divider::before,
+    .event-divider::after {
+        width: 55px;
+    }
+
+    .event-divider span {
+        margin: 0 10px;
+    }
+
+}
+
+/* ========================================
+   GALLERY
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.gallery-section {
+    position: relative;
+    padding: 110px 20px 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #f8f1e7 0%,
+            #fffdf9 50%,
+            #f8f1e7 100%
+        );
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.gallery-section::before {
+    content: "✿";
+
+    position: absolute;
+    top: 30px;
+    left: 15px;
+
+    font-family: Georgia, serif;
+    font-size: 90px;
+
+    color: rgba(190, 150, 55, 0.17);
+
+    transform: rotate(-20deg);
+}
+
+
+.gallery-section::after {
+    content: "✿";
+
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+
+    font-family: Georgia, serif;
+    font-size: 95px;
+
+    color: rgba(190, 150, 55, 0.17);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.gallery-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.gallery-section .section-label {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.gallery-section .section-title {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 8vw, 68px);
+
+    font-weight: 400;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.gallery-description {
+    max-width: 550px;
+
+    margin: 0 auto 50px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   GALLERY GRID
+======================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   GALLERY ITEM
+======================================== */
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    background: #eee5d8;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.45);
+
+    padding: 6px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(70, 50, 25, 0.10);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* ========================================
+   LARGE IMAGE
+======================================== */
+
+.gallery-item.gallery-large {
+    grid-row: span 2;
+
+    min-height: 575px;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* ========================================
+   GOLD INNER FRAME
+======================================== */
+
+.gallery-item::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 11px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.65);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(70, 50, 25, 0.18);
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+
+    filter: brightness(0.88);
+}
+
+
+/* ========================================
+   GOLD CORNER
+======================================== */
+
+.gallery-item::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: 12px;
+    top: 12px;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.7);
+
+    background:
+        rgba(70, 50, 25, 0.35);
+
+    color: #fff;
+
+    font-size: 11px;
+
+    z-index: 3;
+}
+
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.gallery-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(30, 24, 18, 0.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+/* ACTIVE */
+
+.gallery-lightbox.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ========================================
+   LIGHTBOX IMAGE
+======================================== */
+
+.gallery-lightbox img {
+    max-width: 90vw;
+
+    max-height: 85vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 1px solid
+        rgba(212, 175, 55, 0.8);
+
+    padding: 7px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.45);
+
+    transform: scale(0.92);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.gallery-lightbox.active img {
+    transform: scale(1);
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.close-gallery {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(212, 175, 55, 0.8);
+
+    background:
+        rgba(255, 253, 249, 0.1);
+
+    color: #fff;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.close-gallery:hover {
+    background: rgba(212, 175, 55, 0.25);
+
+    transform: rotate(90deg);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .gallery-section {
+        padding: 85px 15px 95px;
+    }
+
+
+    .gallery-section::before {
+        font-size: 60px;
+        left: -5px;
+    }
+
+
+    .gallery-section::after {
+        font-size: 65px;
+        right: -5px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .gallery-item {
+        min-height: 190px;
+
+        padding: 5px;
+    }
+
+
+    .gallery-item.gallery-large {
+        min-height: 390px;
+    }
+
+
+    .gallery-item::before {
+        inset: 8px;
+    }
+
+
+    .gallery-item::after {
+        right: 8px;
+        top: 8px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .gallery-item {
+        min-height: 160px;
+    }
+
+
+    .gallery-item.gallery-large {
+        min-height: 330px;
+    }
+
+
+    .gallery-lightbox {
+        padding: 15px;
+    }
+
+
+    .gallery-lightbox img {
+        max-width: 94vw;
+        max-height: 80vh;
+    }
+
+}
+
+/* ========================================
+   LOVE STORY
+   ELEGANT GOLD TIMELINE
+======================================== */
+
+.story-section {
+    position: relative;
+    padding: 110px 20px 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        #fffdf9;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.story-section::before {
+    content: "✿";
+
+    position: absolute;
+    top: 35px;
+    left: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 95px;
+
+    color: rgba(176, 141, 53, 0.15);
+
+    transform: rotate(-20deg);
+}
+
+.story-section::after {
+    content: "✿";
+
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 100px;
+
+    color: rgba(176, 141, 53, 0.15);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.story-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.story-section .section-label {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.story-section .section-title {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 8vw, 68px);
+
+    font-weight: 400;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.story-description {
+    max-width: 550px;
+
+    margin: 0 auto 65px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.timeline {
+    position: relative;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   GARIS TIMELINE
+======================================== */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(176, 141, 53, 0.55),
+            rgba(176, 141, 53, 0.55),
+            transparent
+        );
+
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   TIMELINE ITEM
+======================================== */
+
+.timeline-item {
+    position: relative;
+
+    width: 50%;
+
+    padding: 0 45px 65px;
+}
+
+
+/* ITEM GANJIL */
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+
+    text-align: right;
+}
+
+
+/* ITEM GENAP */
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   DOT
+======================================== */
+
+.timeline-dot {
+    position: absolute;
+
+    top: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.65);
+
+    background: #fffdf9;
+
+    color: #b08d35;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(80, 60, 30, 0.08);
+
+    z-index: 3;
+}
+
+
+/* DOT KIRI */
+
+.timeline-item:nth-child(odd)
+.timeline-dot {
+    right: -24px;
+}
+
+
+/* DOT KANAN */
+
+.timeline-item:nth-child(even)
+.timeline-dot {
+    left: -24px;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.timeline-content {
+    padding-top: 2px;
+}
+
+
+/* ========================================
+   YEAR
+======================================== */
+
+.timeline-date {
+    margin: 0 0 5px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   STORY TITLE
+======================================== */
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   STORY TEXT
+======================================== */
+
+.timeline-content p:not(.timeline-date) {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   SMALL GOLD LINE
+======================================== */
+
+.timeline-content::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+
+    height: 1px;
+
+    margin-top: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b08d35
+        );
+}
+
+
+/* ========================================
+   RIGHT SIDE LINE
+======================================== */
+
+.timeline-item:nth-child(even)
+.timeline-content::after {
+    background:
+        linear-gradient(
+            90deg,
+            #b08d35,
+            transparent
+        );
+}
+
+
+/* ========================================
+   STORY ENDING
+======================================== */
+
+.story-ending {
+    margin-top: 15px;
+
+    padding-top: 40px;
+}
+
+
+/* HEART */
+
+.story-ending span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    border: 1px solid
+        rgba(176, 141, 53, 0.55);
+
+    border-radius: 50%;
+
+    color: #b08d35;
+
+    font-size: 24px;
+
+    background: #fffdf9;
+}
+
+
+/* ENDING TEXT */
+
+.story-ending p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .story-section {
+        padding: 85px 20px 95px;
+    }
+
+
+    .story-section::before {
+        font-size: 60px;
+
+        left: -5px;
+    }
+
+
+    .story-section::after {
+        font-size: 65px;
+
+        right: -5px;
+    }
+
+
+    .story-description {
+        margin-bottom: 55px;
+    }
+
+
+    /* TIMELINE MENJADI SATU KOLOM */
+
+    .timeline::before {
+        left: 24px;
+
+        transform: none;
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+
+        left: 0;
+
+        padding:
+            0 0 55px 70px;
+
+        text-align: left;
+    }
+
+
+    /* DOT */
+
+    .timeline-item:nth-child(odd)
+    .timeline-dot,
+    .timeline-item:nth-child(even)
+    .timeline-dot {
+        left: 0;
+        right: auto;
+
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .timeline-content h3 {
+        font-size: 31px;
+    }
+
+
+    .timeline-content p:not(.timeline-date) {
+        font-size: 11px;
+    }
+
+
+    .timeline-content::after,
+    .timeline-item:nth-child(even)
+    .timeline-content::after {
+        background:
+            linear-gradient(
+                90deg,
+                #b08d35,
+                transparent
+            );
+    }
+
+
+    .story-ending {
+        margin-top: 0;
+    }
+
+}
+
+/* ========================================
+   RSVP SECTION
+   ELEGANT GOLD
+======================================== */
+
+.rsvp-section {
+    position: relative;
+
+    padding: 110px 20px 120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(190, 150, 55, 0.10),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #fffdf9,
+            #f8f1e7
+        );
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.rsvp-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 30px;
+    left: 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 95px;
+
+    color:
+        rgba(176, 141, 53, 0.15);
+
+    transform: rotate(-20deg);
+}
+
+
+.rsvp-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    right: 10px;
+    bottom: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 100px;
+
+    color:
+        rgba(176, 141, 53, 0.15);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.rsvp-container {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.rsvp-section .section-label {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.rsvp-section .section-title {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size:
+        clamp(45px, 8vw, 65px);
+
+    font-weight: 400;
+
+    color: #40382f;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.rsvp-description {
+    max-width: 500px;
+
+    margin: 0 auto 45px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+#rsvpForm {
+    position: relative;
+
+    padding: 40px 35px 45px;
+
+    background:
+        rgba(255, 253, 249, 0.95);
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.45);
+
+    box-shadow:
+        0 20px 50px
+        rgba(70, 50, 25, 0.10);
+}
+
+
+/* INNER FRAME */
+
+#rsvpForm::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.18);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.form-group > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #9b7828;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   INPUT & SELECT
+======================================== */
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.35);
+
+    background: #fffdf9;
+
+    outline: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    color: #4b4238;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #b08d35;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(176, 141, 53, 0.08);
+}
+
+
+/* ========================================
+   ATTENDANCE OPTIONS
+======================================== */
+
+.attendance-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.attendance-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.25);
+
+    background: #fffdf9;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.attendance-option:hover {
+    border-color: #b08d35;
+
+    background:
+        rgba(176, 141, 53, 0.05);
+}
+
+
+.attendance-option input {
+    accent-color: #b08d35;
+}
+
+
+.attendance-option span {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    color: #5e554b;
+}
+
+
+/* ========================================
+   RSVP BUTTON
+======================================== */
+
+.rsvp-button {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border:
+        1px solid #b08d35;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b08d35,
+            #d1ad55,
+            #a98228
+        );
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(150, 110, 30, 0.25);
+}
+
+
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
+
+.rsvp-success {
+    display: none;
+
+    position: relative;
+
+    padding: 45px 30px;
+
+    background:
+        rgba(255, 253, 249, 0.97);
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.45);
+
+    box-shadow:
+        0 20px 50px
+        rgba(70, 50, 25, 0.10);
+}
+
+
+.rsvp-success.active {
+    display: block;
+}
+
+
+/* ========================================
+   SUCCESS HEART
+======================================== */
+
+.success-heart {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.55);
+
+    border-radius: 50%;
+
+    color: #b08d35;
+
+    font-size: 27px;
+}
+
+
+/* ========================================
+   SUCCESS TITLE
+======================================== */
+
+.rsvp-success h3 {
+    margin: 0 0 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    color: #40382f;
+}
+
+
+.rsvp-success > p {
+    margin: 0 0 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #756b60;
+}
+
+
+.success-name {
+    color: #b08d35 !important;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   QR AREA
+======================================== */
+
+.qr-area {
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid
+        rgba(176, 141, 53, 0.25);
+}
+
+
+/* ========================================
+   QR TITLE
+======================================== */
+
+.qr-title {
+    margin: 0 0 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #b08d35;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   GUEST ID
+======================================== */
+
+.guest-id {
+    margin: 0 0 20px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    color: #756b60;
+}
+
+
+.guest-id strong {
+    color: #9b7828;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   QR WRAPPER
+======================================== */
+
+.qr-wrapper {
+    width: 205px;
+    height: 205px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    padding: 10px;
+
+    background: white;
+
+    border:
+        1px solid
+        rgba(176, 141, 53, 0.55);
+
+    box-shadow:
+        0 10px 30px
+        rgba(70, 50, 25, 0.10);
+}
+
+
+/* ========================================
+   QR CODE
+======================================== */
+
+#qrcode {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+#qrcode img {
+    display: block;
+}
+
+
+/* ========================================
+   QR INFO
+======================================== */
+
+.qr-info {
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+        padding: 85px 15px 95px;
+    }
+
+
+    .rsvp-section::before {
+        font-size: 60px;
+
+        left: -5px;
+    }
+
+
+    .rsvp-section::after {
+        font-size: 65px;
+
+        right: -5px;
+    }
+
+
+    #rsvpForm {
+        padding: 35px 22px 40px;
+    }
+
+
+    .rsvp-success {
+        padding: 40px 20px;
+    }
+
+
+    .qr-wrapper {
+        width: 195px;
+        height: 195px;
+    }
+
+}
+
+/* ========================================
+   SAVE THE DATE - ELEGANT FLOWER GOLD
+======================================== */
+
+.save-date {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(196, 160, 90, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(196, 160, 90, 0.10),
+            transparent 30%
+        ),
+        #f8f4ed;
+
+    overflow: hidden;
+}
+
+
+/* FLOWER DECORATION */
+
+.save-date::before,
+.save-date::after {
+    position: absolute;
+    font-size: 150px;
+    color: rgba(184, 143, 67, 0.18);
+    font-family: serif;
+    pointer-events: none;
+}
+
+.save-date::before {
+    content: "✿";
+    top: 20px;
+    left: -25px;
+    transform: rotate(-20deg);
+}
+
+.save-date::after {
+    content: "✿";
+    bottom: 20px;
+    right: -25px;
+    transform: rotate(25deg);
+}
+
+
+/* CONTAINER */
+
+.save-date-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(184, 143, 67, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(80, 60, 30, 0.08);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* GOLD CORNER */
+
+.save-date-container::before,
+.save-date-container::after {
+    content: "";
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    border-color: rgba(184, 143, 67, 0.65);
+    border-style: solid;
+}
+
+.save-date-container::before {
+    top: 15px;
+    left: 15px;
+
+    border-width: 1px 0 0 1px;
+}
+
+.save-date-container::after {
+    bottom: 15px;
+    right: 15px;
+
+    border-width: 0 1px 1px 0;
+}
+
+
+/* LABEL */
+
+.save-date .section-label {
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+/* TITLE */
+
+.save-date h2 {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(42px, 8vw, 64px);
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+/* DESCRIPTION */
+
+.save-date-text {
+    max-width: 430px;
+
+    margin: 0 auto 40px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   WEDDING DATE
+======================================== */
+
+.wedding-date {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 35px 0 45px;
+}
+
+
+.date-day {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 75px;
+
+    line-height: 1;
+
+    color: #b08a45;
+
+    font-weight: 500;
+}
+
+
+.date-month,
+.date-year {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #5e544a;
+}
+
+
+.date-month {
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+}
+
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+
+.countdown-box {
+    padding: 18px 8px;
+
+    border-top: 1px solid
+        rgba(184, 143, 67, 0.35);
+
+    border-bottom: 1px solid
+        rgba(184, 143, 67, 0.35);
+
+    background: rgba(255, 255, 255, 0.45);
+}
+
+
+.countdown-box span {
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    color: #a67c35;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+
+.countdown-box small {
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #766c61;
+}
+
+
+/* ========================================
+   DECORATION
+======================================== */
+
+.save-date-decoration {
+    margin-top: 40px;
+
+    font-size: 25px;
+
+    color: #b08a45;
+
+    letter-spacing: 10px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .save-date {
+        padding: 70px 15px;
+    }
+
+
+    .save-date-container {
+        padding: 50px 20px;
+    }
+
+
+    .save-date::before,
+    .save-date::after {
+        font-size: 100px;
+    }
+
+
+    .wedding-date {
+        gap: 12px;
+    }
+
+
+    .date-day {
+        font-size: 65px;
+    }
+
+
+    .date-month,
+    .date-year {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+
+    .countdown {
+        gap: 5px;
+    }
+
+
+    .countdown-box {
+        padding: 15px 4px;
+    }
+
+
+    .countdown-box span {
+        font-size: 28px;
+    }
+
+
+    .countdown-box small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+}
+
+/* ========================================
+   WEDDING EVENT
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.event-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        #f5f0e8;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.event-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 20px;
+    left: -25px;
+
+    font-family: serif;
+    font-size: 170px;
+
+    color: rgba(184, 143, 67, 0.14);
+
+    transform: rotate(-25deg);
+
+    pointer-events: none;
+}
+
+
+.event-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 20px;
+    right: -25px;
+
+    font-family: serif;
+    font-size: 170px;
+
+    color: rgba(184, 143, 67, 0.14);
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.event-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.event-section .section-label {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.event-section .section-title {
+    margin-bottom: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 9vw, 65px);
+
+    font-weight: 500;
+
+    color: #4d4237;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.event-description {
+    max-width: 460px;
+
+    margin: 0 auto 50px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   EVENT CARD
+======================================== */
+
+.event-card {
+    position: relative;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 45px 25px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border: 1px solid
+        rgba(184, 143, 67, 0.35);
+
+    box-shadow:
+        0 18px 50px
+        rgba(80, 60, 30, 0.08);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* ========================================
+   GOLD CORNER
+======================================== */
+
+.event-card::before,
+.event-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    border-color:
+        rgba(184, 143, 67, 0.55);
+
+    border-style: solid;
+}
+
+
+.event-card::before {
+    top: 12px;
+    left: 12px;
+
+    border-width:
+        1px 0 0 1px;
+}
+
+
+.event-card::after {
+    bottom: 12px;
+    right: 12px;
+
+    border-width:
+        0 1px 1px 0;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.event-icon {
+    margin-bottom: 15px;
+
+    font-size: 30px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   EVENT TYPE
+======================================== */
+
+.event-type {
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   EVENT TITLE
+======================================== */
+
+.event-card h3 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+/* ========================================
+   GOLD LINE
+======================================== */
+
+.event-line {
+    width: 55px;
+    height: 1px;
+
+    margin: 20px auto;
+
+    background:
+        rgba(184, 143, 67, 0.65);
+}
+
+
+/* ========================================
+   DATE
+======================================== */
+
+.event-date {
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #665b50;
+}
+
+
+/* ========================================
+   TIME
+======================================== */
+
+.event-time {
+    margin-bottom: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   VENUE
+======================================== */
+
+.event-place {
+    margin-bottom: 30px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+.event-place strong {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #4c4034;
+}
+
+
+/* ========================================
+   GOOGLE MAPS BUTTON
+======================================== */
+
+.maps-button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border: 1px solid
+        rgba(184, 143, 67, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.5);
+
+    color: #9b7536;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.maps-button:hover {
+    background: #b08a45;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(176, 138, 69, 0.20);
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.event-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 35px 0;
+}
+
+
+.event-divider::before,
+.event-divider::after {
+    content: "";
+
+    width: 90px;
+    height: 1px;
+
+    background:
+        rgba(184, 143, 67, 0.35);
+}
+
+
+.event-divider span {
+    margin: 0 18px;
+
+    font-size: 18px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   NOTE
+======================================== */
+
+.event-note {
+    margin-top: 45px;
+
+    padding: 0 20px;
+}
+
+
+.event-note p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    color: #6b5d50;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .event-section {
+        padding: 80px 15px;
+    }
+
+
+    .event-section::before,
+    .event-section::after {
+        font-size: 100px;
+    }
+
+
+    .event-card {
+        padding: 40px 20px;
+    }
+
+
+    .event-card h3 {
+        font-size: 36px;
+    }
+
+
+    .event-place strong {
+        font-size: 20px;
+    }
+
+
+    .event-divider::before,
+    .event-divider::after {
+        width: 60px;
+    }
+
+}
+
+/* ========================================
+   OUR GALLERY
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.gallery-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        #faf7f1;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.gallery-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 10px;
+    left: -30px;
+
+    font-size: 170px;
+
+    font-family: serif;
+
+    color: rgba(184, 143, 67, 0.13);
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
+}
+
+
+.gallery-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 10px;
+    right: -30px;
+
+    font-size: 170px;
+
+    font-family: serif;
+
+    color: rgba(184, 143, 67, 0.13);
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.gallery-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.gallery-section .section-label {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.gallery-section .section-title {
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(45px, 8vw, 65px);
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.gallery-description {
+    max-width: 500px;
+
+    margin: 0 auto 55px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   GALLERY GRID
+======================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   GALLERY ITEM
+======================================== */
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1;
+
+    background: #eee8de;
+
+    border: 1px solid
+        rgba(184, 143, 67, 0.25);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(80, 60, 30, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* FOTO BESAR */
+
+.gallery-item.gallery-large {
+    aspect-ratio: 1 / 1.25;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.gallery-item img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(80, 60, 30, 0.14);
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.92);
+}
+
+
+/* ========================================
+   GOLD FRAME
+======================================== */
+
+.gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.65);
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.gallery-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(35, 29, 22, 0.92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+.gallery-lightbox.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ========================================
+   LIGHTBOX IMAGE
+======================================== */
+
+.gallery-lightbox img {
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border: 1px solid
+        rgba(210, 174, 102, 0.65);
+
+    box-shadow:
+        0 20px 70px
+        rgba(0, 0, 0, 0.45);
+
+    animation:
+        galleryZoom 0.35s ease;
+}
+
+
+@keyframes galleryZoom {
+
+    from {
+        transform: scale(0.92);
+
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.close-gallery {
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid
+        rgba(210, 174, 102, 0.6);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #f3dfb1;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.close-gallery:hover {
+    background:
+        rgba(210, 174, 102, 0.25);
+
+    transform: rotate(90deg);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 80px 15px;
+    }
+
+
+    .gallery-section::before,
+    .gallery-section::after {
+        font-size: 100px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 9px;
+    }
+
+
+    .gallery-item {
+        aspect-ratio: 1 / 1.15;
+    }
+
+
+    .gallery-item.gallery-large {
+        aspect-ratio: 1 / 1.15;
+    }
+
+
+    .gallery-description {
+        font-size: 12px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .gallery-lightbox {
+        padding: 15px;
+    }
+
+
+    .gallery-lightbox img {
+        max-width: 95vw;
+
+        max-height: 82vh;
+    }
+
+
+    .close-gallery {
+        top: 15px;
+
+        right: 15px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 25px;
+    }
+
+}
+
+/* ========================================
+   OUR LOVE STORY
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.story-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        #f7f2e9;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.story-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 10px;
+    left: -30px;
+
+    font-family: serif;
+
+    font-size: 170px;
+
+    color:
+        rgba(184, 143, 67, 0.13);
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
+}
+
+
+.story-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 10px;
+    right: -30px;
+
+    font-family: serif;
+
+    font-size: 170px;
+
+    color:
+        rgba(184, 143, 67, 0.13);
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.story-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.story-section .section-label {
+    margin-bottom: 12px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.story-section .section-title {
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 65px);
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.story-description {
+    max-width: 480px;
+
+    margin: 0 auto 65px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.timeline {
+    position: relative;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: left;
+}
+
+
+/* GARIS TENGAH */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 25px;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(184, 143, 67, 0.55),
+            transparent
+        );
+}
+
+
+/* ========================================
+   TIMELINE ITEM
+======================================== */
+
+.timeline-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-bottom: 55px;
+}
+
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   TIMELINE DOT
+======================================== */
+
+.timeline-dot {
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    width: 51px;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(184, 143, 67, 0.65);
+
+    border-radius: 50%;
+
+    background:
+        #f7f2e9;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    color: #b08a45;
+
+    box-shadow:
+        0 0 0 7px
+        rgba(247, 242, 233, 0.95);
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.timeline-content {
+    flex: 1;
+
+    padding: 3px 0 0;
+}
+
+
+.timeline-date {
+    margin-bottom: 5px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #b08a45;
+}
+
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+.timeline-content > p:last-child {
+    margin: 0;
+
+    max-width: 470px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   STORY ENDING
+======================================== */
+
+.story-ending {
+    margin-top: 70px;
+
+    text-align: center;
+}
+
+
+.story-ending span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 30px;
+
+    color: #b08a45;
+}
+
+
+.story-ending p {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .story-section {
+        padding: 80px 20px;
+    }
+
+
+    .story-section::before,
+    .story-section::after {
+        font-size: 100px;
+    }
+
+
+    .story-description {
+        font-size: 12px;
+
+        margin-bottom: 50px;
+    }
+
+
+    .timeline::before {
+        left: 22px;
+    }
+
+
+    .timeline-item {
+        gap: 20px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .timeline-dot {
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 15px;
+
+        box-shadow:
+            0 0 0 6px
+            rgba(247, 242, 233, 0.95);
+    }
+
+
+    .timeline-content h3 {
+        font-size: 28px;
+    }
+
+
+    .timeline-content > p:last-child {
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+
+    .story-ending {
+        margin-top: 55px;
+    }
+
+}
+
+/* ========================================
+   RSVP SECTION
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.rsvp-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(184, 143, 67, 0.11),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        #f8f4ec;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.rsvp-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 10px;
+    left: -30px;
+
+    font-family: serif;
+
+    font-size: 170px;
+
+    color:
+        rgba(184, 143, 67, 0.13);
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
+}
+
+
+.rsvp-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 10px;
+    right: -30px;
+
+    font-family: serif;
+
+    font-size: 170px;
+
+    color:
+        rgba(184, 143, 67, 0.13);
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.rsvp-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.rsvp-section .section-label {
+    margin-bottom: 12px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.rsvp-section .section-title {
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 65px);
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.rsvp-description {
+    max-width: 450px;
+
+    margin: 0 auto 45px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   RSVP FORM
+======================================== */
+
+#rsvpForm {
+    position: relative;
+
+    padding: 45px 30px;
+
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.35);
+
+    box-shadow:
+        0 18px 55px
+        rgba(80, 60, 30, 0.08);
+
+    text-align: left;
+}
+
+
+/* GOLD CORNERS */
+
+#rsvpForm::before,
+#rsvpForm::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.55);
+}
+
+#rsvpForm::before {
+    top: 12px;
+    left: 12px;
+
+    border-width:
+        1px 0 0 1px;
+}
+
+#rsvpForm::after {
+    bottom: 12px;
+    right: 12px;
+
+    border-width:
+        0 1px 1px 0;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.form-group > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #9c7739;
+}
+
+
+/* ========================================
+   INPUT & SELECT
+======================================== */
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.30);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    color: #51463b;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color:
+        rgba(184, 143, 67, 0.75);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 143, 67, 0.08);
+}
+
+
+/* ========================================
+   ATTENDANCE
+======================================== */
+
+.attendance-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.attendance-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.22);
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 11px;
+
+    color: #62574c;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.attendance-option:hover {
+    border-color:
+        rgba(184, 143, 67, 0.60);
+
+    background:
+        rgba(184, 143, 67, 0.06);
+}
+
+
+.attendance-option input {
+    accent-color: #b08a45;
+}
+
+
+/* ========================================
+   RSVP BUTTON
+======================================== */
+
+.rsvp-button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b08a45,
+            #d1ad6c,
+            #a77d38
+        );
+
+    color: white;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(176, 138, 69, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.rsvp-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(176, 138, 69, 0.30);
+}
+
+
+/* ========================================
+   SUCCESS
+======================================== */
+
+.rsvp-success {
+    display: none;
+
+    position: relative;
+
+    padding: 45px 25px;
+
+    margin-top: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.40);
+
+    box-shadow:
+        0 18px 55px
+        rgba(80, 60, 30, 0.08);
+}
+
+
+.rsvp-success.active {
+    display: block;
+
+    animation:
+        rsvpAppear 0.5s ease;
+}
+
+
+@keyframes rsvpAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   SUCCESS HEART
+======================================== */
+
+.success-heart {
+    margin-bottom: 12px;
+
+    font-size: 40px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   SUCCESS TITLE
+======================================== */
+
+.rsvp-success h3 {
+    margin: 0 0 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+.rsvp-success > p {
+    margin: 5px 0;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #756b60;
+}
+
+
+.success-name {
+    margin-top: 15px !important;
+
+    font-family:
+        "Cormorant Garamond",
+        serif !important;
+
+    font-size: 21px !important;
+
+    color: #a67c35 !important;
+}
+
+
+/* ========================================
+   QR AREA
+======================================== */
+
+.qr-area {
+    margin-top: 35px;
+
+    padding: 25px 15px;
+
+    border-top:
+        1px solid
+        rgba(184, 143, 67, 0.25);
+
+    border-bottom:
+        1px solid
+        rgba(184, 143, 67, 0.25);
+}
+
+
+.qr-title {
+    margin-bottom: 10px !important;
+
+    font-family:
+        "Montserrat",
+        sans-serif !important;
+
+    font-size: 9px !important;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #b08a45 !important;
+}
+
+
+/* ========================================
+   GUEST ID
+======================================== */
+
+.guest-id {
+    margin-bottom: 18px !important;
+
+    font-family:
+        "Montserrat",
+        sans-serif !important;
+
+    font-size: 10px !important;
+
+    letter-spacing: 1px;
+
+    color: #756b60 !important;
+}
+
+
+.guest-id strong {
+    color: #9c7537;
+}
+
+
+/* ========================================
+   QR WRAPPER
+======================================== */
+
+.qr-wrapper {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px;
+
+    background: white;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.45);
+
+    box-shadow:
+        0 10px 30px
+        rgba(60, 45, 25, 0.10);
+}
+
+
+#qrcode img,
+#qrcode canvas {
+    display: block;
+}
+
+
+/* ========================================
+   QR INFO
+======================================== */
+
+.qr-info {
+    max-width: 330px;
+
+    margin: 18px auto 0 !important;
+
+    font-family:
+        "Montserrat",
+        sans-serif !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.7 !important;
+
+    color: #81766a !important;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+        padding: 80px 15px;
+    }
+
+
+    .rsvp-section::before,
+    .rsvp-section::after {
+        font-size: 100px;
+    }
+
+
+    #rsvpForm {
+        padding: 40px 20px;
+    }
+
+
+    .rsvp-description {
+        font-size: 12px;
+    }
+
+
+    .attendance-option {
+        font-size: 10px;
+    }
+
+
+    .rsvp-success {
+        padding: 40px 18px;
+    }
+
+
+    .rsvp-success h3 {
+        font-size: 34px;
+    }
+
+}
+
+/* ========================================
+   WEDDING WISHES
+   ELEGANT FLOWER GOLD
+======================================== */
+
+.wishes-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(184, 143, 67, 0.10),
+            transparent 28%
+        ),
+        #f7f2e9;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   FLOWER DECORATION
+======================================== */
+
+.wishes-section::before {
+    content: "✿";
+
+    position: absolute;
+
+    top: 15px;
+    left: -35px;
+
+    font-family: serif;
+
+    font-size: 180px;
+
+    color: rgba(184, 143, 67, 0.12);
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
+}
+
+
+.wishes-section::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 15px;
+    right: -35px;
+
+    font-family: serif;
+
+    font-size: 180px;
+
+    color: rgba(184, 143, 67, 0.12);
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.wishes-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.wishes-section .section-label {
+    margin-bottom: 12px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #b08a45;
+}
+
+
+.wishes-section .section-title {
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 65px);
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+.wishes-description {
+    max-width: 440px;
+
+    margin: 0 auto 45px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.wishes-form {
+    position: relative;
+
+    padding: 40px 30px;
+
+    margin-bottom: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.35);
+
+    box-shadow:
+        0 18px 50px
+        rgba(70, 50, 25, 0.08);
+
+    text-align: left;
+}
+
+
+/* GOLD CORNERS */
+
+.wishes-form::before,
+.wishes-form::after {
+    content: "";
+
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.50);
+}
+
+
+.wishes-form::before {
+    top: 12px;
+    left: 12px;
+
+    border-width:
+        1px 0 0 1px;
+}
+
+
+.wishes-form::after {
+    bottom: 12px;
+    right: 12px;
+
+    border-width:
+        0 1px 1px 0;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.wishes-form .form-group {
+    margin-bottom: 22px;
+}
+
+
+.wishes-form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #9c7739;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.wishes-form input,
+.wishes-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.30);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 12px;
+
+    color: #51463b;
+
+    resize: vertical;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.wishes-form input:focus,
+.wishes-form textarea:focus {
+    border-color:
+        rgba(184, 143, 67, 0.75);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 143, 67, 0.08);
+}
+
+
+.wishes-form textarea {
+    min-height: 120px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.wish-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b08a45,
+            #d1ad6c,
+            #a77d38
+        );
+
+    color: white;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(176, 138, 69, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.wish-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(176, 138, 69, 0.30);
+}
+
+
+/* ========================================
+   WISHES LIST
+======================================== */
+
+.wishes-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   WISH CARD
+======================================== */
+
+.wish-card {
+    position: relative;
+
+    padding: 25px 25px 25px 55px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border:
+        1px solid
+        rgba(184, 143, 67, 0.25);
+
+    box-shadow:
+        0 10px 30px
+        rgba(70, 50, 25, 0.05);
+}
+
+
+/* ========================================
+   HEART
+======================================== */
+
+.wish-heart {
+    position: absolute;
+
+    left: 20px;
+    top: 25px;
+
+    font-size: 22px;
+
+    color: #b08a45;
+}
+
+
+/* ========================================
+   WISH TITLE
+======================================== */
+
+.wish-card h3 {
+    margin: 0 0 8px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: #4c4034;
+}
+
+
+.wish-card p {
+    margin: 0;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #756b60;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .wishes-section {
+        padding: 80px 15px;
+    }
+
+
+    .wishes-section::before,
+    .wishes-section::after {
+        font-size: 100px;
+    }
+
+
+    .wishes-form {
+        padding: 38px 20px;
+    }
+
+
+    .wishes-description {
+        font-size: 11px;
+    }
+
+
+    .wish-card {
+        padding:
+            22px 20px 22px 50px;
+    }
+
+
+    .wish-card h3 {
+        font-size: 23px;
+    }
+
+}
+
+/* ================================= */
+/* DOWNLOAD QR CODE */
+/* ================================= */
+
+#downloadQrButton {
+
+    display: block;
+
+    position: static !important;
+
+    width: 220px;
+
+    max-width: 90%;
+
+    margin: 22px auto 0;
+
+    padding: 12px 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #b89452;
+
+    border-radius: 8px;
+
+    background: #8f6e38;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 5px 15px
+        rgba(80, 60, 35, 0.12);
+
+}
+
+
+/* HOVER */
+
+#downloadQrButton:hover {
+
+    background: #6d5435;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(80, 60, 35, 0.16);
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    #downloadQrButton {
+
+        width: 200px;
+
+        max-width: 100%;
+
+        margin-top: 20px;
+
+        font-size: 9px;
+
+    }
+
+}
+
+/* ================================= */
+/* GUEST ID */
+/* ================================= */
+
+.guest-id {
+
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #9b773b;
+}
+
+
+.guest-id strong {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #604a32;
+
+}
+
+/* ================================= */
+/* QR DOWNLOAD POSITION */
+/* ================================= */
+
+#downloadQrButton {
+
+    display: block;
+
+    position: static !important;
+
+    width: 220px;
+
+    max-width: 100%;
+
+    margin: 22px auto 0;
+
+    padding: 12px 18px;
+
+    border: 1px solid #b89452;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f6e38,
+            #b89452
+        );
+
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+#downloadQrButton:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(80,60,35,0.15);
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rsvp-success {
+
+        padding:
+            38px 20px;
+
+    }
+
+
+    .rsvp-success h3 {
+
+        font-size: 34px;
+
+    }
+
+
+    #downloadQrButton {
+
+        width: 200px;
+
+    }
+
+}
