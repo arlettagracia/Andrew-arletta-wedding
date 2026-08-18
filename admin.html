@@ -2,1371 +2,3925 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Andrew & Arletta | Wedding Invitation</title>
+    <title>Wedding Admin | Andrew & Arletta</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
+    <style>
 
-    <link rel="stylesheet" href="style.css">
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Georgia, serif;
+
+            color: #5d4935;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7f1e8,
+                    #fffaf4
+                );
+
+            background-image:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(184, 148, 82, 0.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 90%,
+                    rgba(184, 148, 82, 0.08),
+                    transparent 25%
+                );
+        }
+
+
+        /* ========================================
+           LOGIN
+        ======================================== */
+
+        .admin-login {
+
+            position: fixed;
+
+            inset: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7f1e8,
+                    #fffaf4
+                );
+
+            z-index: 9999;
+        }
+
+
+        .login-box {
+
+            width: 90%;
+
+            max-width: 380px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            background: white;
+
+            border:
+                1px solid
+                rgba(184, 148, 82, 0.35);
+
+            box-shadow:
+                0 15px 40px
+                rgba(80, 60, 35, 0.12);
+
+            border-radius: 14px;
+        }
+
+
+        .login-subtitle {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: #a17b42;
+        }
+
+
+        .login-box h2 {
+
+            margin: 12px 0;
+
+            font-weight: normal;
+
+            color: #6d5435;
+        }
+
+
+        .login-box p {
+
+            color: #8a755d;
+
+            font-size: 14px;
+        }
+
+
+        #adminPassword {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin: 15px 0;
+
+            border:
+                1px solid
+                #d8c8b2;
+
+            border-radius: 7px;
+
+            outline: none;
+
+            font-family: Georgia, serif;
+        }
+
+
+        #adminPassword:focus {
+
+            border-color: #8f6e38;
+
+            box-shadow:
+                0 0 0 2px
+                rgba(184, 148, 82, 0.12);
+        }
+
+
+        .login-box button {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background: #8f6e38;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-family: Georgia, serif;
+        }
+
+
+        .login-box button:hover {
+
+            opacity: 0.85;
+        }
+
+
+        .login-error {
+
+            color: #b54b3c !important;
+
+            font-size: 13px !important;
+        }
+
+
+        /* ========================================
+           CONTAINER
+        ======================================== */
+
+        .admin-container {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 60px;
+        }
+
+
+/* ========================================
+   HEADER — ELEGANT WEDDING
+======================================== */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 38px;
+
+    position: relative;
+
+    padding: 10px 15px 25px;
+
+}
+
+
+.header::after {
+
+    content: "✦  ✧  ✦";
+
+    display: block;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    letter-spacing: 7px;
+
+    color: #b89452;
+
+}
+
+
+.subtitle {
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #a17b42;
+
+    margin-bottom: 8px;
+
+}
+
+
+h1 {
+
+    font-weight: normal;
+
+    margin: 8px 0;
+
+    font-size: 38px;
+
+    letter-spacing: 1.5px;
+
+    color: #5d4935;
+
+}
+
+
+.date {
+
+    font-size: 14px;
+
+    color: #8a755d;
+
+    margin-top: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+.logout-button {
+
+    margin-top: 14px;
+
+    padding: 8px 18px;
+
+    border:
+        1px solid
+        rgba(184,148,82,0.65);
+
+    background:
+        rgba(255,255,255,0.65);
+
+    color: #8f6e38;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.logout-button:hover {
+
+    background: #8f6e38;
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(80,60,35,0.12);
+
+}
+
+
+/* ========================================
+   STATISTIK WEDDING ADMIN
+======================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* ========================================
+   KARTU STATISTIK
+======================================== */
+
+.stat-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 28px 18px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.98),
+            rgba(250,246,239,0.96)
+        );
+
+    border:
+        1px solid
+        rgba(184,148,82,0.32);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px
+        rgba(80,60,35,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.stat-card::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 14px;
+
+    font-size: 12px;
+
+    color:
+        rgba(184,148,82,0.45);
+
+}
+
+
+.stat-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 45px;
+
+    height: 2px;
+
+    background:
+        #b89452;
+
+    opacity: 0.5;
+
+}
+
+
+.stat-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 16px 35px
+        rgba(80,60,35,0.12);
+
+}
+
+
+/* ========================================
+   ANGKA
+======================================== */
+
+.stat-number {
+
+    margin-bottom: 7px;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    font-weight: normal;
+
+    color: #6d5435;
+
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.stat-label {
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    color: #9a8062;
+
+}
+
+
+/* ========================================
+   WARNA KHUSUS CHECK-IN
+======================================== */
+
+#totalCheckin {
+
+    color: #55734b;
+
+}
+
+
+/* ========================================
+   WARNA KHUSUS BELUM HADIR
+======================================== */
+
+#totalBelum {
+
+    color: #a17b42;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .stat-card {
+
+        padding: 21px 14px;
+
+    }
+
+
+    .stat-number {
+
+        font-size: 29px;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .stat-card {
+
+        padding: 18px 10px;
+
+    }
+
+
+    .stat-number {
+
+        font-size: 26px;
+
+    }
+
+
+    .stat-label {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+}
+
+
+/* ========================================
+   PROGRESS CHECK-IN — PREMIUM
+======================================== */
+
+.progress-card {
+
+    grid-column: 1 / -1;
+
+    margin-top: 4px;
+
+    padding: 26px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(250,245,237,0.96)
+        );
+
+    border:
+        1px solid
+        rgba(184,148,82,0.35);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(80,60,35,0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Ornamen kecil */
+
+.progress-card::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 22px;
+
+    top: 18px;
+
+    font-size: 14px;
+
+    color:
+        rgba(184,148,82,0.45);
+
+}
+
+
+/* ========================================
+   JUDUL
+======================================== */
+
+.progress-title {
+
+    margin-bottom: 15px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #8f6e38;
+
+}
+
+
+/* ========================================
+   INFORMASI PROGRESS
+======================================== */
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 11px;
+
+    font-size: 13px;
+
+    color: #6d5435;
+
+}
+
+
+#checkinProgressText {
+
+    font-weight: normal;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+#checkinProgressPercent {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #8f6e38;
+
+}
+
+
+/* ========================================
+   PROGRESS BAR
+======================================== */
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 14px;
+
+    background:
+        #eee5d8;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 1px 3px
+        rgba(80,60,35,0.08);
+
+}
+
+
+/* ========================================
+   PROGRESS FILL
+======================================== */
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8f6e38,
+            #b89452,
+            #d1b477
+        );
+
+    box-shadow:
+        0 2px 9px
+        rgba(143,110,56,0.25);
+
+    transition:
+        width 0.7s ease;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .progress-card {
+
+        padding: 20px;
+
+    }
+
+
+    .progress-title {
+
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .progress-info {
+
+        font-size: 12px;
+
+    }
+
+
+    .progress-bar {
+
+        height: 11px;
+
+    }
+
+}
+        
+
+        /* ========================================
+           TABLE CONTAINER
+        ======================================== */
+
+        .table-container {
+
+            background:
+                rgba(255, 255, 255, 0.94);
+
+            border:
+                1px solid
+                rgba(184, 148, 82, 0.3);
+
+            padding: 25px;
+
+            overflow-x: auto;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 12px 35px
+                rgba(80, 60, 35, 0.08);
+        }
+
+
+        /* ========================================
+           TABLE HEADER
+        ======================================== */
+
+        .table-header {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .table-header h2 {
+
+            width: 100%;
+
+            margin: 0 0 5px;
+
+            font-weight: normal;
+
+            color: #6d5435;
+        }
+
+
+        /* ========================================
+           SEARCH
+        ======================================== */
+
+        #searchGuest {
+
+            width: 280px;
+
+            padding: 12px 15px;
+
+            border:
+                1px solid
+                rgba(184, 148, 82, 0.4);
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-family: Georgia, serif;
+
+            color: #5d4935;
+
+            background: #fffdf9;
+        }
+
+
+        #searchGuest:focus {
+
+            border-color: #8f6e38;
+
+            box-shadow:
+                0 0 0 2px
+                rgba(184, 148, 82, 0.12);
+        }
+
+
+        /* ========================================
+           BUTTON UMUM
+        ======================================== */
+
+        .refresh-button,
+        .export-button,
+        .checkin-admin-button {
+
+            padding: 11px 18px;
+
+            border-radius: 8px;
+
+            font-family: Georgia, serif;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .refresh-button {
+
+            border:
+                1px solid
+                #8f6e38;
+
+            background: white;
+
+            color: #8f6e38;
+        }
+
+
+        .refresh-button:hover {
+
+            background: #8f6e38;
+
+            color: white;
+        }
+
+
+        .export-button {
+
+            border: none;
+
+            background: #8f6e38;
+
+            color: white;
+        }
+
+
+        .export-button:hover {
+
+            opacity: 0.85;
+        }
+
+
+        .checkin-admin-button {
+
+            display: inline-block;
+
+            background: #8f6e38;
+
+            color: white;
+
+            text-decoration: none;
+        }
+
+
+        .checkin-admin-button:hover {
+
+            opacity: 0.85;
+        }
+
+
+        /* ========================================
+           FILTER
+        ======================================== */
+
+        .filter-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            width: 100%;
+
+            margin-top: 8px;
+        }
+
+
+        .filter-btn {
+
+            position: relative;
+
+            z-index: 10;
+
+            padding: 9px 14px;
+
+            border:
+                1px solid
+                #b89452;
+
+            background: #fffdf9;
+
+            color: #6d5435;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            font-family: Georgia, serif;
+
+            transition: 0.2s;
+        }
+
+
+        .filter-btn:hover {
+
+            background: #f5eadb;
+        }
+
+
+        .filter-btn.active {
+
+            background: #8f6e38;
+
+            color: white;
+        }
+
+
+/* ========================================
+   TABEL DAFTAR TAMU — ELEGANT
+======================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+}
+
+
+/* HEADER TABEL */
+
+thead {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f0e4,
+            #fffaf3
+        );
+
+}
+
+
+th {
+
+    padding: 15px 12px;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #8f6e38;
+
+    border-bottom:
+        1px solid
+        rgba(184,148,82,0.35);
+
+    white-space: nowrap;
+
+}
+
+
+/* BARIS TAMU */
+
+tbody tr {
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+tbody tr:hover {
+
+    background:
+        rgba(184,148,82,0.06);
+
+}
+
+
+/* CELL */
+
+td {
+
+    padding: 15px 12px;
+
+    font-size: 13px;
+
+    color: #5d4935;
+
+    border-bottom:
+        1px solid
+        #eee4d7;
+
+    vertical-align: middle;
+
+}
+
+
+/* NAMA TAMU */
+
+td:nth-child(2) {
+
+    font-weight: bold;
+
+    color: #6d5435;
+
+}
+
+
+/* GUEST ID */
+
+td:first-child {
+
+    font-size: 11px;
+
+    color: #a17b42;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* JUMLAH TAMU */
+
+td:nth-child(3) {
+
+    text-align: center;
+
+}
+
+
+/* ========================================
+   STATUS BADGE
+======================================== */
+
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 125px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+}
+
+
+/* SUDAH CHECK-IN */
+
+.status-badge.checked {
+
+    background:
+        #e8f2e4;
+
+    color:
+        #55734b;
+
+    border:
+        1px solid
+        #bfd4b6;
+
+}
+
+
+/* BELUM CHECK-IN */
+
+.status-badge.waiting {
+
+    background:
+        #f8efe1;
+
+    color:
+        #9a743d;
+
+    border:
+        1px solid
+        #dfc69d;
+
+}
+
+
+/* WAKTU CHECK-IN */
+
+td:last-child {
+
+    font-size: 11px;
+
+    color: #8a755d;
+
+    white-space: nowrap;
+
+}
+
+
+/* ========================================
+   MOBILE TABLE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .table-container {
+
+        padding: 15px;
+
+    }
+
+
+    th {
+
+        padding: 12px 9px;
+
+        font-size: 9px;
+
+    }
+
+
+    td {
+
+        padding: 12px 9px;
+
+        font-size: 12px;
+
+    }
+
+
+    .status-badge {
+
+        min-width: 115px;
+
+        padding: 6px 9px;
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+
+        @media (max-width: 800px) {
+
+            .stats {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .admin-container {
+
+                width: 94%;
+
+                margin-top: 25px;
+            }
+
+
+            h1 {
+
+                font-size: 28px;
+            }
+
+
+            .table-container {
+
+                padding: 15px;
+            }
+
+
+/* ========================================
+   SEARCH + FILTER TAMU
+======================================== */
+
+.table-header {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* JUDUL */
+
+.table-header h2 {
+
+    width: 100%;
+
+    margin: 0 0 4px 0;
+
+    font-size: 23px;
+
+    font-weight: normal;
+
+    color: #6d5435;
+
+}
+
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+#searchGuest {
+
+    flex: 1;
+
+    min-width: 240px;
+
+    max-width: 380px;
+
+    height: 44px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid
+        rgba(184,148,82,0.4);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    color: #5d4935;
+
+    background:
+        #fffdf9;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+#searchGuest::placeholder {
+
+    color: #b3a18b;
+
+}
+
+
+#searchGuest:focus {
+
+    border-color:
+        #8f6e38;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184,148,82,0.10);
+
+}
+
+
+/* ========================================
+   FILTER BUTTONS
+======================================== */
+
+.filter-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    width: 100%;
+
+    margin-top: 2px;
+
+}
+
+
+.filter-btn {
+
+    padding:
+        9px 15px;
+
+    border:
+        1px solid
+        #d6c19e;
+
+    border-radius:
+        20px;
+
+    background:
+        #fffdf9;
+
+    color:
+        #7b6549;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        11px;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+.filter-btn:hover {
+
+    background:
+        #f7efe3;
+
+    border-color:
+        #b89452;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* FILTER AKTIF */
+
+.filter-btn.active {
+
+    background:
+        #8f6e38;
+
+    border-color:
+        #8f6e38;
+
+    color:
+        white;
+
+    box-shadow:
+        0 4px 10px
+        rgba(143,110,56,0.18);
+
+}
+
+
+/* ========================================
+   BUTTON AKSI
+======================================== */
+
+.refresh-button,
+.export-button,
+.checkin-admin-button {
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        0 17px;
+
+    border-radius:
+        10px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        11px;
+
+    cursor:
+        pointer;
+
+    text-decoration:
+        none;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+/* REFRESH */
+
+.refresh-button {
+
+    border:
+        1px solid
+        #b89452;
+
+    background:
+        #fffdf9;
+
+    color:
+        #8f6e38;
+
+}
+
+
+.refresh-button:hover {
+
+    background:
+        #8f6e38;
+
+    color:
+        white;
+
+}
+
+
+/* EXPORT */
+
+.export-button {
+
+    border:
+        1px solid
+        #8f6e38;
+
+    background:
+        #8f6e38;
+
+    color:
+        white;
+
+}
+
+
+.export-button:hover {
+
+    opacity:
+        0.88;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* SCAN QR */
+
+.checkin-admin-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f6e38,
+            #b89452
+        );
+
+    color:
+        white;
+
+    border:
+        none;
+
+    box-shadow:
+        0 5px 14px
+        rgba(143,110,56,0.18);
+
+}
+
+
+.checkin-admin-button:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(143,110,56,0.23);
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .table-header {
+
+        gap: 9px;
+
+    }
+
+
+    #searchGuest {
+
+        width: 100%;
+
+        max-width: none;
+
+        flex-basis: 100%;
+
+    }
+
+
+    .refresh-button,
+    .export-button,
+    .checkin-admin-button {
+
+        flex: 1;
+
+        min-width: 0;
+
+        padding:
+            0 9px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .filter-buttons {
+
+        gap: 6px;
+
+    }
+
+
+    .filter-btn {
+
+        flex:
+            1 1 auto;
+
+        text-align:
+            center;
+
+        padding:
+            9px 10px;
+
+    }
+
+}
+
+
+        @media (max-width: 450px) {
+
+            .stats {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .progress-card {
+
+                grid-column: auto;
+            }
+
+        }
+
+
+/* ========================================
+   PROGRESS CHECK-IN
+======================================== */
+
+.progress-card {
+
+    grid-column: 1 / -1;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.94
+        );
+
+    border:
+        1px solid
+        rgba(
+            184,
+            148,
+            82,
+            0.35
+        );
+
+    padding: 20px 25px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            80,
+            60,
+            35,
+            0.09
+        );
+
+}
+
+
+.progress-title {
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color: #8f6e38;
+
+    margin-bottom: 12px;
+
+}
+
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #6d5435;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #eee4d7;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8f6e38,
+            #b89452
+        );
+
+    border-radius: 20px;
+
+    transition:
+        width 0.6s ease;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .progress-card {
+
+        grid-column: 1 / -1;
+
+    }
+
+}
+
+/* ========================================
+   WEDDING WISHES ADMIN
+======================================== */
+
+.wishes-admin-container {
+
+    margin-top: 30px;
+
+    padding: 28px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border:
+        1px solid
+        rgba(184,148,82,0.30);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(80,60,35,0.08);
+
+}
+
+
+/* ========================================
+   HEADER WISHES
+======================================== */
+
+.wishes-admin-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.wishes-admin-subtitle {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #a17b42;
+
+    margin-bottom: 6px;
+
+}
+
+
+.wishes-admin-header h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    color: #6d5435;
+
+}
+
+
+.wishes-admin-header p {
+
+    margin: 7px 0 0;
+
+    font-size: 12px;
+
+    color: #9a8062;
+
+}
+
+
+/* ========================================
+   REFRESH WISHES
+======================================== */
+
+.refresh-wishes-button {
+
+    padding:
+        11px 17px;
+
+    border:
+        1px solid
+        #b89452;
+
+    border-radius:
+        9px;
+
+    background:
+        #fffdf9;
+
+    color:
+        #8f6e38;
+
+    font-family:
+        Georgia,
+        serif;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.refresh-wishes-button:hover {
+
+    background:
+        #8f6e38;
+
+    color:
+        white;
+
+}
+
+
+/* ========================================
+   LIST WISHES
+======================================== */
+
+.admin-wishes-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+}
+
+
+/* ========================================
+   WISH CARD
+======================================== */
+
+.admin-wish-card {
+
+    position:
+        relative;
+
+    padding:
+        18px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf9,
+            #faf5ec
+        );
+
+    border:
+        1px solid
+        rgba(184,148,82,0.25);
+
+    border-radius:
+        12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-wish-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(80,60,35,0.08);
+
+}
+
+
+/* ========================================
+   NAMA
+======================================== */
+
+.admin-wish-name {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        bold;
+
+    color:
+        #6d5435;
+
+}
+
+
+/* ========================================
+   WAKTU
+======================================== */
+
+.admin-wish-time {
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        10px;
+
+    color:
+        #a17b42;
+
+    letter-spacing:
+        0.5px;
+
+}
+
+
+/* ========================================
+   UCAPAN
+======================================== */
+
+.admin-wish-message {
+
+    margin:
+        0;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+    color:
+        #5d4935;
+
+    white-space:
+        pre-wrap;
+
+    word-break:
+        break-word;
+
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.admin-wish-heart {
+
+    position:
+        absolute;
+
+    top:
+        17px;
+
+    right:
+        20px;
+
+    font-size:
+        18px;
+
+    color:
+        #b89452;
+
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.wishes-loading {
+
+    padding:
+        30px;
+
+    text-align:
+        center;
+
+    color:
+        #9a8062;
+
+    font-size:
+        13px;
+
+}
+
+
+/* ========================================
+   EMPTY
+======================================== */
+
+.wishes-empty {
+
+    padding:
+        35px;
+
+    text-align:
+        center;
+
+    color:
+        #9a8062;
+
+    font-size:
+        13px;
+
+    border:
+        1px dashed
+        rgba(184,148,82,0.35);
+
+    border-radius:
+        10px;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .wishes-admin-container {
+
+        padding:
+            20px;
+
+    }
+
+
+    .wishes-admin-header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .refresh-wishes-button {
+
+        width:
+            100%;
+
+    }
+
+
+    .admin-wish-card {
+
+        padding:
+            16px;
+
+    }
+
+}
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- ==================================================
-     🌸 GLOBAL FALLING PETALS
-================================================== -->
 
-<div class="petal-layer" aria-hidden="true">
+<!-- ========================================
+     LOGIN ADMIN
+======================================== -->
 
-    <span class="falling-petal petal-1">❀</span>
-    <span class="falling-petal petal-2">✿</span>
-    <span class="falling-petal petal-3">❀</span>
-    <span class="falling-petal petal-4">✿</span>
-    <span class="falling-petal petal-5">❀</span>
-    <span class="falling-petal petal-6">✿</span>
-    <span class="falling-petal petal-7">❀</span>
-    <span class="falling-petal petal-8">✿</span>
+<div id="adminLogin" class="admin-login">
+
+    <div class="login-box">
+
+        <div class="login-subtitle">
+            ANDREW & ARLETTA
+        </div>
+
+        <h2>Wedding Admin</h2>
+
+        <p>Masukkan password admin</p>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
+
+        <button
+            type="button"
+            onclick="loginAdmin()"
+        >
+            Masuk
+        </button>
+
+        <p
+            id="loginError"
+            class="login-error"
+        ></p>
+
+    </div>
 
 </div>
 
-<!-- ==================================================
-     BACKGROUND MUSIC
-================================================== -->
 
-<audio
-    id="backgroundMusic"
-    loop
-    preload="auto"
->
-    <source
-        src="assets/music/Christina Perri - A Thousand Years (PianoCello Cover).mp3"
-        type="audio/mpeg"
-    >
-</audio>
+<!-- ========================================
+     ADMIN CONTAINER
+======================================== -->
 
-<button
-    id="musicButton"
-    class="music-button"
-    type="button"
-    onclick="toggleMusic()"
->
-    🎵
-</button>
+<div class="admin-container">
 
 
-<!-- ==================================================
-     COVER / OPENING
-================================================== -->
+    <!-- HEADER -->
 
-<section class="cover" id="cover">
+    <div class="header">
 
-    <img
-    src="assets/flowers/botanical-frame.png"
-    class="botanical-cover-frame"
-    alt=""
->
+        <div class="subtitle">
+            ANDREW & ARLETTA
+        </div>
 
-    <div class="cover-glow glow-1"></div>
-    <div class="cover-glow glow-2"></div>
-
-    <div class="floating-flower flower-1">✿</div>
-    <div class="floating-flower flower-2">❀</div>
-    <div class="floating-flower flower-3">✿</div>
-    <div class="floating-flower flower-4">❀</div>
-    <div class="floating-flower flower-5">✿</div>
-    <div class="floating-flower flower-6">❀</div>
-
-    <div class="petal petal-1">❀</div>
-    <div class="petal petal-2">✿</div>
-    <div class="petal petal-3">❀</div>
-    <div class="petal petal-4">✿</div>
-    <div class="petal petal-5">❀</div>
-    <div class="petal petal-6">✿</div>
-
-    <div class="gold-frame"></div>
-
-    <div class="cover-content">
-
-        <p class="cover-opening">
-            TOGETHER WITH THEIR FAMILIES
-        </p>
-
-        <p class="small-title">
-            THE WEDDING OF
-        </p>
-
-        <h1 class="cover-names">
-            <span>Nicholas Andrew</span>
-            <span class="ampersand">&</span>
-            <span>Arleta Gracia Kakiay</span>
+        <h1>
+            Wedding Admin
         </h1>
 
-        <div class="gold-line"></div>
-
-        <p class="cover-date">
-            07 NOVEMBER 2026
-        </p>
-
-        <div class="cover-flower">
-            ❀
-        </div>
-
-        <div class="guest-box">
-
-            <p class="guest-label">
-                Kepada Yth.
-            </p>
-
-            <p
-                class="guest-name"
-                id="guestName"
-            >
-                Tamu Undangan
-            </p>
-
-        </div>
-
         <button
-            class="open-button"
             type="button"
-            onclick="openInvitation()"
+            class="logout-button"
+            onclick="logoutAdmin()"
         >
-            <span>♡</span>
-            BUKA UNDANGAN
-            <span>♡</span>
+            🔒 Logout
         </button>
 
-        <p class="cover-hint">
-            Tap untuk membuka undangan
-        </p>
-
-    </div>
-
-    <div class="cover-bottom">
-        <span></span>
-        <small>SCROLL TO EXPLORE</small>
-        <span></span>
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     BRIDE & GROOM
-================================================== -->
-<section
-    class="couple-section floral-background-page"
-    id="couple"
->
-<!-- ==================================================
-     🌸 FLORAL DECORATION — PAGE 2
-================================================== -->
-<section
-    class="couple-section floral-background-page"
-    id="couple"
->
-
-    <!-- BACKGROUND FLORAL YANG SAMA DENGAN COVER -->
-   <img
-    src="assets/flowers/botanical-frame.png"
-    class="page-botanical-frame"
-    alt=""
->
-
-    <!-- ISI HALAMAN 2 -->
-    <div class="couple-container">
-
-        <!-- isi halaman 2 kamu tetap di sini -->
-
- <div class="couple-container">
-
-        <p class="section-label">
-            THE WEDDING
-        </p>
-
-        <h2 class="section-title">
-            Andrew <span>&</span> Arletta
-        </h2>
-
-        <p class="section-description">
-            Colossians 3:14 (NLT) 
-            "Above all, clothe yourselves with love, which binds us all together in perfect harmony."
-        </p>
-
-        </div>
-
-        <!-- GROOM -->
-
-        <div class="couple-card">
-
-            <div class="photo-frame">
-
-                <img
-                    src="assets/images/foto6.jpeg"
-                    alt="Andrew"
-                >
-
-            </div>
-
-            <p class="couple-role">
-                THE GROOM
-            </p>
-
-            <h3>
-                Nicholas Andrew
-            </h3>
-
-            <p class="parents">
-                Putra dari<br>
-                Bapak [Suryanta] &<br>
-                Ibu [Linda Tanuwijaya]
-            </p>
-
-            <!-- ANDREW -->
-<a
-    href="https://instagram.com/nicholasandrew12"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="instagram-name"
->
-    @nicholasandrew12
-</a>           
-
-        </div>
-
-
-        <div class="couple-divider">
-            <span>♡</span>
-        </div>
-
-
-        <!-- BRIDE -->
-
-        <div class="couple-card">
-
-            <div class="photo-frame">
-
-                <img
-                    src="assets/images/foto2.jpeg"
-                    alt="Arletta"
-                >
-
-            </div>
-
-            <p class="couple-role">
-                THE BRIDE
-            </p>
-
-            <h3>
-                Arletta Gracia.K
-            </h3>
-
-            <p class="parents">
-                Putri dari<br>
-                Bapak [Alm. Alfred Delvis Kakiay] &<br>
-                Ibu [Debora Trirumanti]
-            </p>
-
-            <!-- ARLETTA -->
-<a
-    href="https://instagram.com/04.112"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="instagram-name"
->
-    @04.122
-</a>
-
-        </div>
-
-
-        <div class="love-quote">
-
-            <p>
-                "Two hearts, one journey,
-                one beautiful forever."
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     SAVE THE DATE
-================================================== -->
-
-<section
-    class="save-date"
-    id="save-date"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page3-botanical-frame"
-    alt=""
->
-
-    <div class="save-date-container">
-
-        <p class="section-label">
-            SAVE THE DATE
-        </p>
-
-        <h2>
-            Our Special Day
-        </h2>
-
-        <p class="save-date-text">
-            We invite you to celebrate
-            our love and happiness with us.
-        </p>
-
-        <div class="wedding-date">
-
-            <span class="date-day">
-                07
-            </span>
-
-            <span class="date-month">
-                NOVEMBER
-            </span>
-
-            <span class="date-year">
-                2026
-            </span>
-
-        </div>
-
-
-        <!-- COUNTDOWN -->
-
-        <div class="countdown">
-
-            <div class="countdown-box">
-                <span id="days">00</span>
-                <small>DAYS</small>
-            </div>
-
-            <div class="countdown-box">
-                <span id="hours">00</span>
-                <small>HOURS</small>
-            </div>
-
-            <div class="countdown-box">
-                <span id="minutes">00</span>
-                <small>MINUTES</small>
-            </div>
-
-            <div class="countdown-box">
-                <span id="seconds">00</span>
-                <small>SECONDS</small>
-            </div>
-
-        </div>
-
-        <div class="save-date-decoration">
-            ✦
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     WEDDING EVENT
-================================================== -->
-
-<section
-    class="event-section"
-    id="event"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page4-botanical-frame"
-    alt=""
->
-
-    <div class="event-container">
-
-        <p class="section-label">
-            WEDDING EVENT
-        </p>
-
-        <h2 class="section-title">
-            Join Us
-        </h2>
-
-        <p class="event-description">
-            Dengan penuh sukacita, kami mengundang
-            Anda untuk hadir dan merayakan
-            hari bahagia kami.
-        </p>
-
-
-        <!-- PEMBERKATAN -->
-
-        <div class="event-card">
-
-            <div class="event-icon">
-                ♡
-            </div>
-
-            <p class="event-type">
-                HOLY MATRIMONY
-            </p>
-
-            <h3>
-                Pemberkatan
-            </h3>
-
-            <div class="event-line"></div>
-
-            <p class="event-date">
-                Sabtu, 07 November 2026
-            </p>
-
-            <p class="event-time">
-                15.00 WIB
-            </p>
-
-            <p class="event-place">
-                <strong>
-                    [Graha Adhya Wicaksana]
-                </strong>
-                <br>
-                [Pondok Labu]
-                <br>
-                [Jakarta Selatan]
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/Jn93t9CjWUQgMUGN8"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="maps-button"
-            >
-                📍 LIHAT LOKASI
-            </a>
-
-        </div>
-
-
-        <div class="event-divider">
-            <span>✦</span>
-        </div>
-
-
-        <!-- RESEPSI -->
-
-        <div class="event-card">
-
-            <div class="event-icon">
-                ♡
-            </div>
-
-            <p class="event-type">
-                WEDDING RECEPTION
-            </p>
-
-            <h3>
-                Resepsi
-            </h3>
-
-            <div class="event-line"></div>
-
-            <p class="event-date">
-                Sabtu, 07 November 2026
-            </p>
-
-            <p class="event-time">
-                19.00 WIB
-            </p>
-
-            <p class="event-place">
-                <strong>
-                     [Graha Adhya Wicaksana]
-                </strong>
-                <br>
-                [Pondok Labu]
-                <br>
-                [Jakarta Selatan]
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/Jn93t9CjWUQgMUGN8"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="maps-button"
-            >
-                📍 LIHAT LOKASI
-            </a>
-
-        </div>
-
-
-        <div class="event-note">
-
-            <p>
-                Mohon hadir tepat waktu
-                dan menjadi bagian dari
-                sukacita kami.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     GALLERY
-================================================== -->
-
-<section
-    class="gallery-section"
-    id="gallery"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page5-botanical-frame"
-    alt=""
->
-
-    <div class="gallery-container">
-
-        <p class="section-label">
-            OUR GALLERY
-        </p>
-
-        <h2 class="section-title">
-            Our Moments
-        </h2>
-
-        <p class="gallery-description">
-            A collection of moments and memories
-            that we will cherish forever.
-        </p>
-
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item gallery-large">
-
-                <img
-                    src="assets/images/foto1.jpeg"
-                    alt="Foto Andrew dan Arletta 1"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="assets/images/foto2.jpeg"
-                    alt="Foto Andrew dan Arletta 2"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="assets/images/foto3.jpeg"
-                    alt="Foto Andrew dan Arletta 3"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
-
-            <div class="gallery-item gallery-large">
-
-                <img
-                    src="assets/images/foto4.jpeg"
-                    alt="Foto Andrew dan Arletta 4"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="assets/images/foto5.jpeg"
-                    alt="Foto Andrew dan Arletta 5"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="assets/images/foto6.jpeg"
-                    alt="Foto Andrew dan Arletta 6"
-                    onclick="openGallery(this)"
-                >
-
-            </div>
-
+        <div class="date">
+            07 November 2026
         </div>
 
     </div>
 
 
-    <!-- LIGHTBOX -->
+    <!-- ========================================
+         STATISTIK
+    ======================================== -->
 
-    <div
-        class="gallery-lightbox"
-        id="galleryLightbox"
-        onclick="closeGallery()"
-    >
+    <div class="stats">
 
-        <button
-            class="close-gallery"
-            type="button"
-            onclick="event.stopPropagation(); closeGallery()"
-            aria-label="Tutup foto"
-        >
-            ×
-        </button>
 
-        <img
-            id="galleryImage"
-            src=""
-            alt="Wedding Gallery"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     LOVE STORY
-================================================== -->
-
-<section
-    class="story-section"
-    id="story"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page6-botanical-frame"
-    alt=""
->
-
-
-    <div class="story-container">
-
-        <p class="section-label">
-            OUR JOURNEY
-        </p>
-
-        <h2 class="section-title">
-            Our Love Story
-        </h2>
-
-        <p class="story-description">
-            Every love story is beautiful,
-            but ours is our favorite.
-        </p>
-
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot">
-                    01
-                </div>
-
-                <div class="timeline-content">
-
-                    <p class="timeline-date">
-                        2022
-                    </p>
-
-                    <h3>
-                        First Meet 2016
-                    </h3>
-
-                    <p>
-                       Perjalanan kami bermula di tempat yang sama,
-                    saat takdir mempertemukan kami di sekolah Nicholas Andrew (kakak kelas) - Arleta gracia kakiay (adik kelas). 
-                    Berawal dari sapaan hangat dan pertemanan sederhana, 
-                    kami menghabiskan waktu selama satu tahun untuk saling mengenal, 
-                    berbagi cerita, dan membangun fondasi hubungan yang kuat.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot">
-                    02
-                </div>
-
-                <div class="timeline-content">
-
-                    <p class="timeline-date">
-                        2023
-                    </p>
-
-                    <h3>
-                        First Date 2017
-                    </h3>
-
-                    <p>
-                       Setelah satu tahun berjalan sebagai teman, 
-                       benih-benih cinta mulai tumbuh semakin jelas. 
-                       Pada tahun 2017, kami memutuskan untuk melangkah lebih dekat 
-                       dan mengikat komitmen dalam sebuah hubungan kasih. 
-                       Sejak saat itu, setiap momen sederhana menjadi hari-hari penuh warna yang kami lalui bersama.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot">
-                    03
-                </div>
-
-                <div class="timeline-content">
-
-                    <p class="timeline-date">
-                        2025
-                    </p>
-
-                    <h3>
-                        The Proposal 2025
-                    </h3>
-
-                    <p>
-                       Delapan tahun berlalu dengan ribuan kenangan manis 
-                       dan proses pendewasaan bersama. 
-                       Pada tahun 2025, dengan penuh rasa kasih, kedewasaan, dan keyakinan yang mantap, 
-                       kami memutuskan untuk mengukir janji baru dan melangkah ke jenjang perjalanan yang lebih serius.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot">
-                    04
-                </div>
-
-                <div class="timeline-content">
-
-                    <p class="timeline-date">
-                        2026
-                    </p>
-
-                    <h3>
-                        Our Wedding 2026
-                    </h3>
-
-                    <p>
-                        Di tahun 2026, hari yang selama ini kami impikan
-                        dan nantikan akhirnya tiba. Di hadapan Tuhan, 
-                        keluarga, serta sahabat tercinta, kami mengikat janji suci pernikahan. 
-                        Hari ini bukan hanya puncak dari perjalanan panjang kami, 
-                        melainkan sebuah awal baru yang indah untuk melangkah bersama mengarungi sisa hidup selamanya.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="story-ending">
-
-            <span>
-                ♡
-            </span>
-
-            <p>
-                And the best is yet to come.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     RSVP
-================================================== -->
-
-<section
-    class="rsvp-section"
-    id="rsvp"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page7-botanical-frame"
-    alt=""
->
-
-    <div class="rsvp-container">
-
-        <p class="section-label">
-            RSVP
-        </p>
-
-        <h2 class="section-title">
-            Will You Join Us?
-        </h2>
-
-        <p class="rsvp-description">
-            Kehadiran dan doa restu Anda merupakan
-            kebahagiaan bagi kami.
-        </p>
-
-
-        <form id="rsvpForm">
-
-            <div class="form-group">
-
-                <label for="guestNameRsvp">
-                    NAMA TAMU
-                </label>
-
-                <input
-                    type="text"
-                    id="guestNameRsvp"
-                    placeholder="Masukkan nama Anda"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="guestPhone">
-                    NOMOR WHATSAPP
-                </label>
-
-                <input
-                    type="tel"
-                    id="guestPhone"
-                    placeholder="08xxxxxxxxxx"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    KONFIRMASI KEHADIRAN
-                </label>
-
-                <div class="attendance-options">
-
-                    <label class="attendance-option">
-
-                        <input
-                            type="radio"
-                            name="attendance"
-                            value="Hadir"
-                            required
-                        >
-
-                        <span>
-                            ✓ Ya, saya akan hadir
-                        </span>
-
-                    </label>
-
-
-                    <label class="attendance-option">
-
-                        <input
-                            type="radio"
-                            name="attendance"
-                            value="Tidak Hadir"
-                        >
-
-                        <span>
-                            × Maaf, saya tidak dapat hadir
-                        </span>
-
-                    </label>
-
-                </div>
-
-            </div>
-
+        <div class="stat-card">
 
             <div
-                class="form-group"
-                id="guestCountGroup"
+                class="stat-number"
+                id="totalRsvp"
             >
+                0
+            </div>
 
-                <label for="guestCount">
-                    JUMLAH TAMU
-                </label>
+            <div class="stat-label">
+                TOTAL RSVP
+            </div>
 
-                <select id="guestCount">
+        </div>
 
-                    <option value="1">
-                        1 Orang
-                    </option>
 
-                    <option value="2">
-                        2 Orang
-                    </option>
+        <div class="stat-card">
 
-                    <option value="3">
-                        3 Orang
-                    </option>
+            <div
+                class="stat-number"
+                id="totalHadir"
+            >
+                0
+            </div>
 
-                    <option value="4">
-                        4 Orang
-                    </option>
+            <div class="stat-label">
+                HADIR
+            </div>
 
-                </select>
+        </div>
+
+
+        <div class="stat-card">
+
+            <div
+                class="stat-number"
+                id="totalCheckin"
+            >
+                0
+            </div>
+
+            <div class="stat-label">
+                CHECK-IN
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div
+                class="stat-number"
+                id="totalBelum"
+            >
+                0
+            </div>
+
+            <div class="stat-label">
+                BELUM HADIR
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-card">
+
+            <div class="progress-title">
+                Progress Check-In
+            </div>
+
+            <div class="progress-info">
+
+                <span id="checkinProgressText">
+                    0 / 0 tamu
+                </span>
+
+                <span id="checkinProgressPercent">
+                    0%
+                </span>
 
             </div>
 
+            <div class="progress-bar">
+
+                <div
+                    id="checkinProgressBar"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         TABEL TAMU
+    ======================================== -->
+
+    <div class="table-container">
+
+
+        <div class="table-header">
+
+            <h2>
+                Daftar Tamu
+            </h2>
+
+
+            <!-- SEARCH -->
+
+            <input
+                type="text"
+                id="searchGuest"
+                placeholder="Cari nama atau Guest ID..."
+            >
+
+
+            <!-- REFRESH -->
 
             <button
-                type="submit"
-                class="rsvp-button"
+                type="button"
+                class="refresh-button"
+                onclick="refreshDashboard()"
             >
-                KONFIRMASI KEHADIRAN
+                🔄 Refresh Data
             </button>
 
-        </form>
 
+            <!-- EXPORT -->
 
-        <!-- RSVP SUCCESS -->
-
-        <div
-            class="rsvp-success"
-            id="rsvpSuccess"
-        >
-
-            <div class="success-heart">
-                ♡
-            </div>
-
-            <h3>
-                Terima Kasih
-            </h3>
-
-            <p>
-                Konfirmasi kehadiran Anda
-                telah diterima.
-            </p>
-
-            <p
-                class="success-name"
-                id="successName"
-            ></p>
-
-
-            <!-- QR CODE -->
-
-            <div
-                class="qr-area"
-                id="qrArea"
+            <button
+                type="button"
+                class="export-button"
+                onclick="exportGuests()"
             >
-
-                <p class="qr-title">
-                    YOUR RSVP QR CODE
-                </p>
-
-                <p class="guest-id">
-                    GUEST ID:
-                    <strong id="guestId">
-                        -
-                    </strong>
-                </p>
+                📥 Download Daftar Tamu
+            </button>
 
 
-                <div class="qr-wrapper">
+            <!-- SCAN QR -->
 
-                    <div id="qrcode"></div>
+            <a
+                href="checkin.html"
+                class="checkin-admin-button"
+            >
+                📷 Scan QR Check-In
+            </a>
 
-                </div>
+
+            <!-- FILTER -->
+
+            <div class="filter-buttons">
 
 
                 <button
                     type="button"
-                    id="downloadQrButton"
-                    onclick="downloadQRCode()"
+                    class="filter-btn active"
+                    onclick="filterGuests('all', this)"
                 >
-                    ↓ DOWNLOAD QR CODE
+                    Semua
                 </button>
 
-                <p class="qr-info">
-                    Tunjukkan QR Code ini saat
-                    melakukan check-in di hari
-                    pernikahan.
-                </p>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==================================================
-     💝 WEDDING GIFT
-================================================== -->
-
-<section
-    class="gift-section"
-    id="gift"
->
-
-    <img
-        src="assets/flowers/botanical-frame.png"
-        class="page-gift-botanical-frame"
-        alt=""
-    >
-
-    <div class="gift-container">
-
-        <p class="section-label">
-            WEDDING GIFT
-        </p>
-
-        <h2 class="section-title">
-            A Little Gift
-        </h2>
-
-        <p class="gift-description">
-            Kehadiran dan doa restu Anda merupakan
-            hadiah terindah bagi kami.
-            Namun, apabila Anda ingin memberikan tanda
-            kasih, dapat melalui rekening berikut.
-        </p>
-
-
-        <!-- REKENING 1 -->
-
-        <div class="bank-card">
-
-            <div class="bank-icon">
-                ♡
-            </div>
-
-            <p class="bank-label">
-                BANK ACCOUNT
-            </p>
-
-            <h3>
-                BCA
-            </h3>
-
-            <p class="account-name">
-                Nicholas Andrew
-            </p>
-
-            <p
-                class="account-number"
-                id="accountNumber1"
-            >
-                8801628770
-            </p>
-
-            <button
-                type="button"
-                class="copy-account-button"
-                onclick="copyAccountNumber('accountNumber1', this)"
-            >
-                SALIN NO. REKENING
-            </button>
-
-        </div>
-
-
-        <!-- REKENING 2 -->
-
-        <div class="bank-card">
-
-            <div class="bank-icon">
-                ♡
-            </div>
-
-            <p class="bank-label">
-                BANK ACCOUNT
-            </p>
-
-            <h3>
-                BCA
-            </h3>
-
-            <p class="account-name">
-                Arleta Gracia Kakiay
-            </p>
-
-            <p
-                class="account-number"
-                id="accountNumber2"
-            >
-                7006780503
-            </p>
-
-            <button
-                type="button"
-                class="copy-account-button"
-                onclick="copyAccountNumber('accountNumber2', this)"
-            >
-                SALIN NO. REKENING
-            </button>
-
-        </div>
-
-
-        <div class="gift-thank-you">
-
-            <span>✦</span>
-
-            <p>
-                Thank you for your love,
-                prayers, and generosity.
-            </p>
-
-            <span>✦</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==================================================
-     WEDDING WISHES
-================================================== -->
-
-<section
-    class="wishes-section"
-    id="wishes"
->
-
-<img
-    src="assets/flowers/botanical-frame.png"
-    class="page8-botanical-frame"
-    alt=""
->
-
-    <div class="wishes-container">
-
-        <p class="section-label">
-            WEDDING WISHES
-        </p>
-
-        <h2 class="section-title">
-            Ucapan & Doa
-        </h2>
-
-        <p class="wishes-description">
-            Berikan ucapan dan doa terbaik
-            untuk perjalanan cinta kami.
-        </p>
-
-
-        <!-- FORM UCAPAN -->
-
-        <div class="wishes-form">
-
-            <div class="form-group">
-
-                <label for="wishName">
-                    NAMA
-                </label>
-
-                <input
-                    type="text"
-                    id="wishName"
-                    placeholder="Nama Anda"
+                <button
+                    type="button"
+                    class="filter-btn"
+                    onclick="filterGuests('hadir', this)"
                 >
+                    Hadir
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    onclick="filterGuests('checkin', this)"
+                >
+                    Sudah Check-in
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    onclick="filterGuests('belum', this)"
+                >
+                    Belum Check-in
+                </button>
+
 
             </div>
-
-
-            <div class="form-group">
-
-                <label for="wishMessage">
-                    UCAPAN & DOA
-                </label>
-
-                <textarea
-                    id="wishMessage"
-                    rows="4"
-                    placeholder="Tuliskan ucapan dan doa untuk kami..."
-                ></textarea>
-
-            </div>
-
-
-            <button
-                type="button"
-                class="wish-button"
-                onclick="sendWish()"
-            >
-                KIRIM UCAPAN ♡
-            </button>
 
         </div>
 
 
-        <!-- DAFTAR UCAPAN -->
+        <!-- TABLE -->
 
-        <div
-            class="wishes-list"
-            id="wishesList"
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Nama</th>
+
+                    <th>Jumlah</th>
+
+                    <th>Kehadiran</th>
+
+                    <th>Check-in</th>
+
+                    <th>Waktu</th>
+
+                    <th>AKSI</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="guestTable">
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+</div>
+
+<!-- ========================================
+     WEDDING WISHES ADMIN
+======================================== -->
+
+<div class="table-container" style="margin-top: 25px;">
+
+    <div class="table-header">
+
+        <h2>
+            WEDDING WISHES
+        </h2>
+
+        <p style="
+            width: 100%;
+            margin: 0;
+            color: #8a755d;
+            font-size: 13px;
+        ">
+            Ucapan & Doa
+        </p>
+
+        <p style="
+            width: 100%;
+            margin: 0;
+            color: #9a8062;
+            font-size: 12px;
+        ">
+            Semua ucapan yang dikirim melalui undangan digital.
+        </p>
+
+        <button
+    type="button"
+    class="refresh-button"
+    onclick="loadAdminWishes()"
+>
+    🔄 Refresh Ucapan
+</button>
+
+    </div>
+
+
+    <div id="adminWishesList">
+
+        <div style="
+            text-align: center;
+            padding: 30px;
+            color: #9a8062;
+        ">
+            Memuat ucapan...
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* ========================================
+   GOOGLE SCRIPT
+======================================== */
+
+const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyIpXj_OoNuFAGCh19Lpcl6ixCuKdINopRTTyCLfbpl9ev8BIgsG4IAK7eRW4TXT2aR/exec";
+
+
+/* ========================================
+   ADMIN LOGIN
+======================================== */
+
+const ADMIN_PASSWORD = "ARLETTA2026";
+
+
+/* ========================================
+   DATA GLOBAL
+======================================== */
+
+let allGuests = [];
+
+let currentFilter = "all";
+
+let currentSearch = "";
+
+
+/* ========================================
+   LOGIN ADMIN
+======================================== */
+
+function loginAdmin() {
+
+    const passwordInput =
+        document.getElementById(
+            "adminPassword"
+        );
+
+    const loginBox =
+        document.getElementById(
+            "adminLogin"
+        );
+
+    const errorMessage =
+        document.getElementById(
+            "loginError"
+        );
+
+
+    const password =
+        passwordInput.value.trim();
+
+
+    if (
+        password ===
+        ADMIN_PASSWORD
+    ) {
+
+        sessionStorage.setItem(
+            "weddingAdminLogin",
+            "true"
+        );
+
+
+        loginBox.style.display =
+            "none";
+
+
+        errorMessage.textContent = "";
+
+
+        loadGuests();
+
+    }
+
+    else {
+
+        errorMessage.textContent =
+            "Password salah.";
+
+    }
+
+}
+
+
+/* ========================================
+   CEK STATUS LOGIN
+======================================== */
+
+function checkAdminLogin() {
+
+    const loginBox =
+        document.getElementById(
+            "adminLogin"
+        );
+
+
+    const loggedIn =
+        sessionStorage.getItem(
+            "weddingAdminLogin"
+        );
+
+
+    if (
+        loggedIn ===
+        "true"
+    ) {
+
+        loginBox.style.display =
+            "none";
+
+    }
+
+    else {
+
+        loginBox.style.display =
+            "flex";
+
+    }
+
+}
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+function logoutAdmin() {
+
+    sessionStorage.removeItem(
+        "weddingAdminLogin"
+    );
+
+}
+
+/* ========================================
+   AMBIL DATA TAMU
+======================================== */
+
+function loadGuests() {
+
+    console.log(
+        "Mengambil data tamu..."
+    );
+
+
+    fetch(
+        GOOGLE_SCRIPT_URL +
+        "?action=getGuests"
+    )
+
+    .then(function(response) {
+
+        return response.json();
+
+    })
+
+    .then(function(data) {
+
+        console.log(
+            "DATA TAMU:",
+            data
+        );
+
+
+        if (
+            !data ||
+            !data.success
+        ) {
+
+            console.error(
+                "Gagal mengambil data tamu."
+            );
+
+            return;
+
+        }
+
+
+        allGuests =
+            Array.isArray(
+                data.guests
+            )
+                ? data.guests
+                : [];
+
+
+        /*
+         * Simpan juga ke window
+         * supaya mudah dicek dari Console.
+         */
+
+        window.allGuests =
+            allGuests;
+
+
+        console.log(
+            "JUMLAH TAMU:",
+            allGuests.length
+        );
+
+
+        updateStatistics();
+
+
+        renderGuests();
+
+    })
+
+    .catch(function(error) {
+
+        console.error(
+            "ERROR DASHBOARD:",
+            error
+        );
+
+    });
+
+}
+
+
+/* ========================================
+   HITUNG STATISTIK
+======================================== */
+
+function updateStatistics() {
+
+    const totalRsvp =
+        allGuests.length;
+
+
+    const totalHadir =
+        allGuests.filter(
+            function(guest) {
+
+                return String(
+                    guest.kehadiran || ""
+                )
+                .trim()
+                .toLowerCase()
+                === "hadir";
+
+            }
+        ).length;
+
+
+    const totalCheckin =
+        allGuests.filter(
+            function(guest) {
+
+                return String(
+                    guest.checkinStatus || ""
+                )
+                .trim()
+                .toUpperCase()
+                === "CHECKED IN";
+
+            }
+        ).length;
+
+
+    const totalBelum =
+        Math.max(
+            0,
+            totalHadir -
+            totalCheckin
+        );
+
+
+
+    /*
+     * Statistik
+     */
+
+    document.getElementById(
+        "totalRsvp"
+    ).textContent =
+        totalRsvp;
+
+
+    document.getElementById(
+        "totalHadir"
+    ).textContent =
+        totalHadir;
+
+
+    document.getElementById(
+        "totalCheckin"
+    ).textContent =
+        totalCheckin;
+
+
+    document.getElementById(
+        "totalBelum"
+    ).textContent =
+        totalBelum;
+
+
+    /*
+     * Progress Check-In
+     */
+
+    const progressText =
+        document.getElementById(
+            "checkinProgressText"
+        );
+
+
+    const progressPercent =
+        document.getElementById(
+            "checkinProgressPercent"
+        );
+
+
+    const progressBar =
+        document.getElementById(
+            "checkinProgressBar"
+        );
+
+
+    if (
+        progressText &&
+        progressPercent &&
+        progressBar
+    ) {
+
+        const percentage =
+            totalHadir > 0
+                ? Math.round(
+                    (
+                        totalCheckin /
+                        totalHadir
+                    ) * 100
+                )
+                : 0;
+
+
+        progressText.textContent =
+            totalCheckin +
+            " / " +
+            totalHadir +
+            " tamu";
+
+
+        progressPercent.textContent =
+            percentage +
+            "%";
+
+
+        progressBar.style.width =
+            percentage +
+            "%";
+
+    }
+
+
+    console.log(
+        "HASIL STATISTIK:",
+        {
+            totalRsvp:
+                totalRsvp,
+
+            totalHadir:
+                totalHadir,
+
+            totalCheckin:
+                totalCheckin,
+
+            totalBelum:
+                totalBelum
+        }
+    );
+
+}
+
+
+/* ========================================
+   TAMPILKAN DAFTAR TAMU
+======================================== */
+
+function renderGuests() {
+
+    const guestTable =
+        document.getElementById(
+            "guestTable"
+        );
+
+
+    if (!guestTable) {
+
+        console.error(
+            "guestTable tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    guestTable.innerHTML = "";
+
+
+    if (
+        allGuests.length === 0
+    ) {
+
+        guestTable.innerHTML = `
+            <tr>
+                <td
+                    colspan="6"
+                    style="
+                        text-align:center;
+                        padding:30px;
+                    "
+                >
+                    Belum ada data tamu.
+                </td>
+            </tr>
+        `;
+
+        return;
+
+    }
+
+
+    allGuests.forEach(
+        function(guest) {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            /*
+             * Status check-in
+             */
+
+            const checkedIn =
+                String(
+                    guest.checkinStatus || ""
+                )
+                .trim()
+                .toUpperCase()
+                === "CHECKED IN";
+
+
+            /*
+             * Waktu check-in
+             */
+
+            let checkinTime =
+                "—";
+
+
+            if (
+                guest.checkinWaktu
+            ) {
+
+                const date =
+                    new Date(
+                        guest.checkinWaktu
+                    );
+
+
+                if (
+                    !isNaN(
+                        date.getTime()
+                    )
+                ) {
+
+                    checkinTime =
+                        date.toLocaleString(
+                            "id-ID",
+                            {
+                                day:
+                                    "2-digit",
+
+                                month:
+                                    "2-digit",
+
+                                year:
+                                    "numeric",
+
+                                hour:
+                                    "2-digit",
+
+                                minute:
+                                    "2-digit"
+                            }
+                        );
+
+                }
+
+            }
+
+
+            /*
+             * Badge check-in
+             */
+
+            const badge =
+                checkedIn
+
+                    ?
+
+                    `
+                    <span
+                        class="status-badge checked"
+                    >
+                        ✓ CHECKED IN
+                    </span>
+                    `
+
+                    :
+
+                    `
+                    <span
+                        class="status-badge waiting"
+                    >
+                        BELUM CHECK-IN
+                    </span>
+                    `;
+
+
+            /*
+             * Isi baris
+             */
+
+  row.innerHTML = `
+
+    <td>
+        ${guest.id || "—"}
+    </td>
+
+    <td>
+        ${guest.nama || "—"}
+    </td>
+
+    <td>
+        ${guest.jumlahTamu || "—"}
+    </td>
+
+    <td>
+        ${guest.kehadiran || "—"}
+    </td>
+
+    <td>
+        ${badge}
+    </td>
+
+    <td>
+        ${checkinTime}
+    </td>
+
+    <td>
+
+        <button
+            type="button"
+            onclick="sendWhatsAppInvitation(
+                '${guest.id || ""}',
+                '${encodeURIComponent(guest.nama || "")}',
+                '${guest.whatsapp || ""}'
+            )"
+            style="
+                padding:8px 14px;
+                border:none;
+                border-radius:20px;
+                background:#8f6e38;
+                color:white;
+                cursor:pointer;
+                font-family:Georgia,serif;
+                font-size:12px;
+            "
         >
+            💌 KIRIM WA
+        </button>
 
-            <div class="wish-card">
+    </td>
 
-                <div class="wish-heart">
-                    ♡
+`;
+
+
+            /*
+             * Data untuk filter
+             */
+
+            row.dataset.hadir =
+                String(
+                    guest.kehadiran || ""
+                )
+                .trim()
+                .toLowerCase()
+                === "hadir"
+                    ? "true"
+                    : "false";
+
+
+            row.dataset.checkin =
+                checkedIn
+                    ? "true"
+                    : "false";
+
+
+            guestTable.appendChild(
+                row
+            );
+
+        }
+    );
+
+
+    applyFilters();
+
+}
+
+function sendWhatsAppInvitation(
+    guestId,
+    guestNameEncoded,
+    whatsapp
+) {
+
+    const guestName =
+        decodeURIComponent(
+            guestNameEncoded
+        );
+
+    if (!whatsapp) {
+
+        alert(
+            "Nomor WhatsApp tamu belum tersedia."
+        );
+
+        return;
+
+    }
+
+
+    let phone =
+        String(whatsapp)
+            .replace(
+                /[\s\-()+]/g,
+                ""
+            );
+
+
+    if (
+        phone.startsWith("0")
+    ) {
+
+        phone =
+            "62" +
+            phone.substring(1);
+
+    }
+
+
+    const invitationLink =
+        "https://arlettagracia.github.io/Andrew-arletta-wedding/" +
+        "?to=" +
+        encodeURIComponent(
+            guestName
+        ) +
+        "&id=" +
+        encodeURIComponent(
+            guestId
+        );
+
+
+    const message =
+        "Shalom " +
+        guestName +
+        "! 💕\n\n" +
+
+        "Dengan penuh sukacita, kami mengundang Anda untuk hadir di hari bahagia kami.\n\n" +
+
+        "Andrew & Arletta\n" +
+        "07 November 2026\n\n" +
+
+        "Undangan lengkap:\n" +
+        invitationLink;
+
+
+    const whatsappUrl =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(
+            message
+        );
+
+
+    window.open(
+        whatsappUrl,
+        "_blank"
+    );
+
+}
+
+/* ========================================
+   FILTER + SEARCH
+======================================== */
+
+function applyFilters() {
+
+    const rows =
+        document.querySelectorAll(
+            "#guestTable tr"
+        );
+
+
+    rows.forEach(
+        function(row) {
+
+            const text =
+                row.textContent
+                    .toLowerCase();
+
+
+            /*
+             * SEARCH
+             */
+
+            const searchMatch =
+                text.includes(
+                    currentSearch
+                );
+
+
+            /*
+             * FILTER
+             */
+
+            let filterMatch =
+                true;
+
+
+            if (
+                currentFilter ===
+                "hadir"
+            ) {
+
+                filterMatch =
+                    row.dataset.hadir
+                    === "true";
+
+            }
+
+
+            if (
+                currentFilter ===
+                "checkin"
+            ) {
+
+                filterMatch =
+                    row.dataset.checkin
+                    === "true";
+
+            }
+
+
+            if (
+                currentFilter ===
+                "belum"
+            ) {
+
+                filterMatch =
+                    row.dataset.hadir
+                    === "true"
+                    &&
+                    row.dataset.checkin
+                    === "false";
+
+            }
+
+
+            /*
+             * Tampilkan / sembunyikan
+             */
+
+            row.style.display =
+                searchMatch &&
+                filterMatch
+                    ? ""
+                    : "none";
+
+        }
+    );
+
+}
+
+
+/* ========================================
+   TOMBOL FILTER
+======================================== */
+
+function filterGuests(
+    type,
+    button
+) {
+
+    console.log(
+        "FILTER DIKLIK:",
+        type
+    );
+
+
+    currentFilter =
+        type;
+
+
+    /*
+     * Hapus active
+     */
+
+    document
+        .querySelectorAll(
+            ".filter-btn"
+        )
+        .forEach(
+            function(btn) {
+
+                btn.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+
+    /*
+     * Tambahkan active
+     */
+
+    if (button) {
+
+        button.classList.add(
+            "active"
+        );
+
+    }
+
+
+    applyFilters();
+
+}
+
+
+/* ========================================
+   SEARCH TAMU
+======================================== */
+
+function setupSearch() {
+
+    const search =
+        document.getElementById(
+            "searchGuest"
+        );
+
+
+    if (!search) {
+
+        return;
+
+    }
+
+
+    search.addEventListener(
+        "input",
+        function() {
+
+            currentSearch =
+                this.value
+                    .trim()
+                    .toLowerCase();
+
+
+            applyFilters();
+
+        }
+    );
+
+}
+
+
+/* ========================================
+   EXPORT DAFTAR TAMU
+======================================== */
+
+function exportGuests() {
+
+    if (
+        allGuests.length === 0
+    ) {
+
+        alert(
+            "Belum ada data tamu."
+        );
+
+        return;
+
+    }
+
+
+    let csv =
+        "ID,Nama,Jumlah Tamu,Kehadiran,Check-in,Waktu Check-in\n";
+
+
+    allGuests.forEach(
+        function(guest) {
+
+            const checkedIn =
+                String(
+                    guest.checkinStatus || ""
+                )
+                .trim()
+                .toUpperCase()
+                === "CHECKED IN";
+
+
+            const values = [
+
+                guest.id || "",
+
+                guest.nama || "",
+
+                guest.jumlahTamu || "",
+
+                guest.kehadiran || "",
+
+                checkedIn
+                    ? "CHECKED IN"
+                    : "BELUM CHECK-IN",
+
+                guest.checkinWaktu || ""
+
+            ];
+
+
+            csv +=
+                values
+                    .map(
+                        function(value) {
+
+                            return (
+                                '"' +
+                                String(value)
+                                    .replace(
+                                        /"/g,
+                                        '""'
+                                    ) +
+                                '"'
+                            );
+
+                        }
+                    )
+                    .join(",")
+                    +
+                    "\n";
+
+        }
+    );
+
+
+    const blob =
+        new Blob(
+            [csv],
+            {
+                type:
+                    "text/csv;charset=utf-8;"
+            }
+        );
+
+
+    const url =
+        URL.createObjectURL(
+            blob
+        );
+
+
+    const link =
+        document.createElement(
+            "a"
+        );
+
+
+    link.href =
+        url;
+
+
+    link.download =
+        "daftar-tamu-wedding.csv";
+
+
+    document.body.appendChild(
+        link
+    );
+
+
+    link.click();
+
+
+    document.body.removeChild(
+        link
+    );
+
+
+    URL.revokeObjectURL(
+        url
+    );
+
+}
+
+
+/* ========================================
+   REFRESH DATA
+======================================== */
+
+function refreshDashboard() {
+
+    location.reload();
+
+}
+
+
+/* ========================================
+   ENTER UNTUK LOGIN
+======================================== */
+
+function setupPasswordEnter() {
+
+    const password =
+        document.getElementById(
+            "adminPassword"
+        );
+
+
+    if (!password) {
+
+        return;
+
+    }
+
+
+    password.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key ===
+                "Enter"
+            ) {
+
+                loginAdmin();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ========================================
+   LOAD WEDDING WISHES ADMIN
+======================================== */
+
+function loadAdminWishes() {
+
+    const wishesList =
+        document.getElementById(
+            "adminWishesList"
+        );
+
+
+    if (!wishesList) {
+
+        console.error(
+            "adminWishesList tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    wishesList.innerHTML = `
+
+        <div style="
+            text-align:center;
+            padding:30px;
+            color:#9a8062;
+        ">
+            Memuat ucapan...
+        </div>
+
+    `;
+
+
+    fetch(
+        GOOGLE_SCRIPT_URL +
+        "?action=getWishes"
+    )
+
+    .then(function(response) {
+
+        return response.json();
+
+    })
+
+    .then(function(data) {
+
+        console.log(
+            "DATA WEDDING WISHES:",
+            data
+        );
+
+
+        if (
+            !data ||
+            !data.success ||
+            !Array.isArray(data.wishes)
+        ) {
+
+            wishesList.innerHTML = `
+
+                <div style="
+                    text-align:center;
+                    padding:30px;
+                    color:#9a8062;
+                ">
+                    Belum ada ucapan.
                 </div>
 
-                <h3>
-                    Wedding Wishes
-                </h3>
+            `;
 
-                <p>
-                    Doa dan ucapan dari keluarga
-                    dan sahabat akan tampil di sini.
-                </p>
+            return;
 
+        }
+
+
+        if (
+            data.wishes.length === 0
+        ) {
+
+            wishesList.innerHTML = `
+
+                <div style="
+                    text-align:center;
+                    padding:30px;
+                    color:#9a8062;
+                ">
+                    Belum ada ucapan.
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        wishesList.innerHTML = "";
+
+
+        data.wishes
+            .slice()
+            .reverse()
+            .forEach(
+                function(wish) {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.style.cssText = `
+
+                        padding:20px;
+
+                        margin-bottom:12px;
+
+                        background:
+                            linear-gradient(
+                                135deg,
+                                #fffdf9,
+                                #f8f1e6
+                            );
+
+                        border:
+                            1px solid
+                            rgba(
+                                184,
+                                148,
+                                82,
+                                0.25
+                            );
+
+                        border-radius:12px;
+
+                        box-shadow:
+                            0 6px 18px
+                            rgba(
+                                80,
+                                60,
+                                35,
+                                0.06
+                            );
+
+                    `;
+
+
+                    const name =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    name.textContent =
+                        wish.nama ||
+                        "Tanpa Nama";
+
+
+                    name.style.cssText = `
+
+                        font-weight:bold;
+
+                        font-size:15px;
+
+                        color:#6d5435;
+
+                        margin-bottom:7px;
+
+                    `;
+
+
+                    const message =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    message.textContent =
+                        wish.ucapan ||
+                        "";
+
+
+                    message.style.cssText = `
+
+                        font-size:13px;
+
+                        line-height:1.7;
+
+                        color:#5d4935;
+
+                    `;
+
+
+                    const time =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    time.textContent =
+                        wish.waktu
+                            ? new Date(
+                                wish.waktu
+                            ).toLocaleString(
+                                "id-ID",
+                                {
+                                    day:
+                                        "2-digit",
+
+                                    month:
+                                        "long",
+
+                                    year:
+                                        "numeric",
+
+                                    hour:
+                                        "2-digit",
+
+                                    minute:
+                                        "2-digit"
+                                }
+                            )
+                            : "";
+
+
+                    time.style.cssText = `
+
+                        margin-top:10px;
+
+                        font-size:10px;
+
+                        color:#a17b42;
+
+                    `;
+
+
+                    card.appendChild(
+                        name
+                    );
+
+                    card.appendChild(
+                        message
+                    );
+
+                    card.appendChild(
+                        time
+                    );
+
+
+                    wishesList.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+    })
+
+    .catch(function(error) {
+
+        console.error(
+            "ERROR WEDDING WISHES:",
+            error
+        );
+
+
+        wishesList.innerHTML = `
+
+            <div style="
+                text-align:center;
+                padding:30px;
+                color:#b54b3c;
+            ">
+                Gagal memuat ucapan.
             </div>
 
-        </div>
+        `;
 
-    </div>
+    });
 
-</section>
-
-<!-- ==================================================
-     📸 FINAL CLOSING — ANDREW & ARLETTA
-================================================== -->
-
-<section
-    class="closing-section"
-    id="closing"
->
-
-    <!-- FOTO PENUTUP -->
-    <div class="closing-photo">
-
-        <img
-            src="assets/images/foto1.jpeg"
-            alt="Andrew & Arletta"
-        >
-
-    </div>
+}
 
 
-    <!-- OVERLAY -->
-    <div class="closing-overlay"></div>
+/* ========================================
+   JALANKAN SAAT HALAMAN SIAP
+======================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        checkAdminLogin();
+
+        setupSearch();
+
+        setupPasswordEnter();
 
 
-    <!-- BOTANICAL FRAME -->
-    <img
-        src="assets/flowers/botanical-frame.png"
-        class="closing-botanical-frame"
-        alt=""
-    >
+        if (
+            sessionStorage.getItem(
+                "weddingAdminLogin"
+            ) === "true"
+        ) {
 
+            loadGuests();
 
-    <!-- KONTEN PENUTUP -->
-    <div class="closing-content">
+            loadAdminWishes();
 
-        <p class="closing-small">
-            THANK YOU FOR BEING PART
-            OF OUR STORY
-        </p>
+        }
 
+    }
+);
 
-        <div class="closing-line"></div>
-
-
-        <h2 class="closing-names">
-            Andrew
-            <span>&amp;</span>
-            Arletta
-        </h2>
-
-
-        <p class="closing-date">
-            07 NOVEMBER 2026
-        </p>
-
-
-        <div class="closing-flower">
-            ❀
-        </div>
-
-
-        <p class="closing-message">
-            With love, gratitude,
-            and endless happiness.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- ==================================================
-     JAVASCRIPT LIBRARIES
-================================================== -->
-
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-></script>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+</script>
