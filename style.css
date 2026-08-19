@@ -20269,3 +20269,25 @@ section::marker {
     }
 
 }
+
+    /* =========================================
+   PAKSA CONTAINER UTAMA KE TENGAH
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        position: relative !important;
+    }
+
+    body > div,
+    body > section,
+    body > main {
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transform: none !important;
+    }
+
+}
