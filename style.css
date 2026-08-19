@@ -20229,24 +20229,27 @@ section::marker {
         font-size: 38px !important;
     }
 
-    
-/* FIX POSISI UNDANGAN DI HP */
+    /* FIX POSISI UNDANGAN DI HP */
 @media (max-width: 768px) {
-
-    body {
-        overflow-x: hidden;
+    html,body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
     }
 
-    .cover-page,
+    /* Pusatkan semua konten untuk di mobile */
+    .container,
+    .main-container,
+    .cover-container,
     .cover,
-    .opening-page {
-        width: 100%;
+    .opening,
+    .page {
+        width: 100% !important;
+        max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        left: 0 !important;
-        transform: translateX(0) !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
-
-}
-
 }
