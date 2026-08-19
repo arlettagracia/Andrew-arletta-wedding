@@ -20229,4 +20229,23 @@ section::marker {
         font-size: 38px !important;
     }
 
+    
+/* FIX POSISI UNDANGAN DI HP */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .cover-page,
+    .cover,
+    .opening-page {
+        width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+    }
+
+}
+
 }
