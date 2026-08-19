@@ -20229,65 +20229,68 @@ section::marker {
         font-size: 38px !important;
     }
 
-/* =========================================
-   FIX MOBILE - POSISI UNDANGAN KE TENGAH
-   ========================================= */
+/* ==========================================
+   FINAL FIX - COVER CENTER
+   ========================================== */
+
+.cover {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.cover-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media screen and (max-width: 768px) {
 
-    html,
-    body {
-        width: 100% !important;
-        min-width: 100% !important;
+    .cover {
+        width: 100vw !important;
+        min-width: 100vw !important;
+
         margin: 0 !important;
-        padding: 0 !important;
-        overflow-x: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    /* Semua section utama */
-    section,
-    main,
-    .section,
-    .container,
-    .wrapper,
-    .content,
-    .page,
-    .cover,
-    .opening,
-    .cover-page,
-    .opening-page,
-    .main-container {
-        box-sizing: border-box !important;
-    }
-
-    /* Paksa halaman utama memenuhi layar */
-    body > * {
+    .cover-content {
         width: 100% !important;
         max-width: 100% !important;
+
         margin-left: auto !important;
         margin-right: auto !important;
-    }
 
-}
+        left: auto !important;
+        right: auto !important;
 
-    /* =========================================
-   PAKSA CONTAINER UTAMA KE TENGAH
-   ========================================= */
-
-@media screen and (max-width: 768px) {
-
-    body {
-        position: relative !important;
-    }
-
-    body > div,
-    body > section,
-    body > main {
-        left: 0 !important;
-        right: 0 !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
         transform: none !important;
+
+        text-align: center !important;
     }
 
-}
+}    
