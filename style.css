@@ -20229,27 +20229,43 @@ section::marker {
         font-size: 38px !important;
     }
 
-    /* FIX POSISI UNDANGAN DI HP */
-@media (max-width: 768px) {
-    html,body {
+/* =========================================
+   FIX MOBILE - POSISI UNDANGAN KE TENGAH
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
         width: 100% !important;
+        min-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow-x: hidden !important;
     }
 
-    /* Pusatkan semua konten untuk di mobile */
+    /* Semua section utama */
+    section,
+    main,
+    .section,
     .container,
-    .main-container,
-    .cover-container,
+    .wrapper,
+    .content,
+    .page,
     .cover,
     .opening,
-    .page {
+    .cover-page,
+    .opening-page,
+    .main-container {
+        box-sizing: border-box !important;
+    }
+
+    /* Paksa halaman utama memenuhi layar */
+    body > * {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
     }
+
 }
