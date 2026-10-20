@@ -22489,3 +22489,160 @@ html {
     transform: none !important;
     clip-path: none !important;
 }
+
+/* Stable, level opening cover across desktop and mobile. */
+#cover.cover {
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-x: hidden !important;
+}
+
+#cover .cover-photo {
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 50% !important;
+    height: 100% !important;
+    transform: none !important;
+    scale: 1 !important;
+    animation: none !important;
+    clip-path: none !important;
+    object-fit: cover !important;
+}
+
+#cover .cover-photo-bride {
+    left: 0 !important;
+    right: auto !important;
+    object-position: center 32% !important;
+}
+
+#cover .cover-photo-groom {
+    right: 0 !important;
+    left: auto !important;
+    object-position: center 43% !important;
+}
+
+#cover::before,
+#cover::after {
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+}
+
+#cover::before {
+    inset: 0 !important;
+}
+
+#cover::after {
+    inset: 18px !important;
+}
+
+#cover .cover-content {
+    position: relative !important;
+    z-index: 3 !important;
+    box-sizing: border-box !important;
+    width: min(92%, 720px) !important;
+    margin: auto !important;
+}
+
+#cover .guest-box,
+#cover:not(.invitation-open) .guest-box {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: none !important;
+    width: min(90%, 360px) !important;
+    margin: 20px auto !important;
+    padding: 14px 18px !important;
+    border: 1px solid rgba(255, 238, 215, .7) !important;
+    border-radius: 10px !important;
+    background: rgba(255, 248, 239, .16) !important;
+}
+
+#cover .guest-label,
+#cover .guest-name {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 600px) {
+    #cover.cover {
+        min-height: 100vh;
+        min-height: 100svh;
+        align-items: center !important;
+        overflow-y: auto !important;
+        padding: 18px 14px 74px !important;
+    }
+
+    #cover .cover-content {
+        width: 100% !important;
+        max-width: 460px !important;
+        padding: clamp(22px, 4vh, 36px) 16px !important;
+        border-radius: 12px;
+    }
+
+    #cover .cover-opening,
+    #cover .small-title {
+        font-size: clamp(9px, 2.8vw, 11px) !important;
+        letter-spacing: .14em !important;
+        line-height: 1.6 !important;
+    }
+
+    #cover .small-title {
+        margin: 14px 0 !important;
+    }
+
+    #cover .cover-names {
+        font-size: clamp(36px, 10.5vw, 52px) !important;
+        line-height: 1 !important;
+    }
+
+    #cover .cover-names .ampersand {
+        display: block !important;
+        margin: 7px 0 !important;
+        font-size: clamp(32px, 9vw, 42px) !important;
+    }
+
+    #cover .gold-line {
+        margin: 18px auto !important;
+    }
+
+    #cover .cover-date {
+        margin: 0 0 16px !important;
+        font-size: 11px !important;
+        letter-spacing: .2em !important;
+    }
+
+    #cover .guest-box,
+    #cover:not(.invitation-open) .guest-box {
+        width: min(100%, 340px) !important;
+        margin: 16px auto !important;
+        padding: 12px 14px !important;
+    }
+
+    #cover .guest-label {
+        margin: 0 0 5px !important;
+        font-size: 10px !important;
+    }
+
+    #cover .guest-name {
+        margin: 0 !important;
+        font-size: 21px !important;
+    }
+
+    #cover .open-button {
+        min-height: 50px !important;
+        width: min(100%, 280px) !important;
+        margin: 2px auto 0 !important;
+    }
+
+    #cover .cover-hint {
+        margin: 10px auto 0 !important;
+        font-size: 11px !important;
+    }
+
+    #cover .cover-bottom {
+        min-height: 48px !important;
+        padding-bottom: 13px !important;
+    }
+}
