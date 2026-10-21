@@ -22694,6 +22694,7 @@ html {
 #cover .cover-photo-groom {
     left: 0 !important;
     right: auto !important;
+    object-position: 55% 43% !important;
     -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 65%, transparent 100%) !important;
     mask-image: linear-gradient(90deg, #000 0%, #000 65%, transparent 100%) !important;
 }
@@ -22708,7 +22709,7 @@ html {
 
 @media (max-width: 600px) {
     #cover .cover-photo-bride {
-        transform: translateY(-10vh) scale(1.2) !important;
+        transform: translateY(-7vh) scale(1.2) !important;
         transform-origin: right center !important;
     }
 }
