@@ -22701,6 +22701,14 @@ html {
 #cover .cover-photo-bride {
     left: auto !important;
     right: 0 !important;
+    object-position: center 43% !important;
     -webkit-mask-image: linear-gradient(270deg, #000 0%, #000 65%, transparent 100%) !important;
     mask-image: linear-gradient(270deg, #000 0%, #000 65%, transparent 100%) !important;
+}
+
+@media (max-width: 600px) {
+    #cover .cover-photo-bride {
+        transform: translateY(-7vh) scale(1.15) !important;
+        transform-origin: right center !important;
+    }
 }
