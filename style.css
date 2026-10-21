@@ -22708,7 +22708,7 @@ html {
 
 @media (max-width: 600px) {
     #cover .cover-photo-bride {
-        transform: translateY(-7vh) scale(1.15) !important;
+        transform: translateY(-10vh) scale(1.2) !important;
         transform-origin: right center !important;
     }
 }
