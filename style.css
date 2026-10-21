@@ -22646,3 +22646,20 @@ html {
         padding-bottom: 13px !important;
     }
 }
+
+/* Restore a clear, front-facing cover photo after the latest index update. */
+#cover .cover-photo {
+    filter: saturate(.9) sepia(.02) contrast(1.02) brightness(.98) !important;
+}
+
+#cover::before {
+    background:
+        linear-gradient(90deg, rgba(38, 27, 30, .12), rgba(38, 27, 30, .34) 50%, rgba(38, 27, 30, .12)),
+        linear-gradient(180deg, rgba(38, 27, 30, .04), rgba(38, 27, 30, .2)) !important;
+}
+
+#cover .cover-content {
+    background: rgba(58, 43, 45, .24) !important;
+    backdrop-filter: blur(1px) !important;
+    -webkit-backdrop-filter: blur(1px) !important;
+}
