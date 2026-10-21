@@ -22663,3 +22663,28 @@ html {
     backdrop-filter: blur(1px) !important;
     -webkit-backdrop-filter: blur(1px) !important;
 }
+
+/* Fill the mobile cover card evenly down to the lower frame. */
+@media (max-width: 600px) {
+    #cover.cover {
+        align-items: center !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+
+    #cover .cover-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: calc(100vh - 110px) !important;
+        min-height: calc(100svh - 110px) !important;
+        margin: auto !important;
+        border-radius: 12px !important;
+        background: rgba(58, 43, 45, .24) !important;
+    }
+
+    #cover .cover-content > * {
+        flex: 0 0 auto;
+    }
+}
