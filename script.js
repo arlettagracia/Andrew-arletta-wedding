@@ -835,10 +835,10 @@ if (submitButton) {
         }
 
 
-        if (guestCount > 20) {
+        if (guestCount > 2) {
 
             alert(
-                "Jumlah tamu maksimal 20 orang."
+                "Jumlah tamu maksimal 2 orang."
             );
 
             guestCountElement.focus();
