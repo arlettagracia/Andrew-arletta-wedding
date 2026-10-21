@@ -22689,3 +22689,18 @@ html {
         flex: 0 0 auto;
     }
 }
+
+/* Show the groom on the left and the bride on the right. */
+#cover .cover-photo-groom {
+    left: 0 !important;
+    right: auto !important;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 65%, transparent 100%) !important;
+    mask-image: linear-gradient(90deg, #000 0%, #000 65%, transparent 100%) !important;
+}
+
+#cover .cover-photo-bride {
+    left: auto !important;
+    right: 0 !important;
+    -webkit-mask-image: linear-gradient(270deg, #000 0%, #000 65%, transparent 100%) !important;
+    mask-image: linear-gradient(270deg, #000 0%, #000 65%, transparent 100%) !important;
+}
